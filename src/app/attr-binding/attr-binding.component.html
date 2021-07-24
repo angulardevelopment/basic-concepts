@@ -1,0 +1,33 @@
+
+
+
+
+<img src="https://i.picsum.photos/id/556/200/300.jpg?hmac=TLwE28gIMuw2BUTndMuC3hoTlK6FtrE6Mx1UnR2dzu8" [attr.alt]="value>=1 ? 'val1' : 'val2'">
+
+<!--  create and set a colspan attribute -->
+<table border=1>
+  <!--  expression calculates colspan=2 -->
+  <tr><td [attr.colspan]="1 + 1">One-Two</td></tr>
+
+  <!-- ERROR: There is no `colspan` property to set!
+    <tr><td colspan="{{1 + 1}}">Three-Four</td></tr>
+  -->
+
+  <tr><td>Five</td><td>Six</td></tr>
+</table>
+
+<br>
+<!-- create and set an aria attribute for assistive technology -->
+<button [attr.aria-label]="actionName">{{actionName}} with Aria</button>
+<br><br>
+
+<!-- The following effects are not discussed in the chapter -->
+<div>
+  <!-- any use of [attr.disabled] creates the disabled attribute -->
+  <button [attr.disabled]="isUnchanged">Disabled</button>
+
+  <button [attr.disabled]="!isUnchanged">Disabled as well</button>
+
+  <!-- we'd have to remove it with property binding -->
+  <button disabled [disabled]="false">Enabled (but inert)</button>
+</div>
