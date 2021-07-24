@@ -1,1 +1,20 @@
-<!-- <nav [style.background-color]="expression"></nav> -->
+
+
+
+
+<button [style.color]="isSpecial ? 'red': 'green'">Red</button>
+<button [style.background-color]="canSave ? 'cyan': 'grey'" >Save</button>
+
+<button [style.font-size.em]="isSpecial ? 3 : 1" >Big</button>
+<button [style.font-size.%]="!isSpecial ? 150 : 50" >Small</button>
+<label>FontSize (px): <input [(ngModel)]="fontSizePx"></label>
+
+<div [style.font-size.px]="fontSizePx">Resizable Text</div>
+
+<h4>Ng style example</h4>
+<ul *ngFor= " let employee of employeeList">
+<li [ngStyle]="{'color': getColor(employee.country)}">{{employee.name}} ({{employee.country}})</li>
+</ul>
+
+
+

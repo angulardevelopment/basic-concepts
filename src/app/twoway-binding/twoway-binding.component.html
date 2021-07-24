@@ -1,1 +1,14 @@
-<p>twoway-binding works!</p>
+User Name: <input type="text" [(ngModel)]="userName"  ><br/>
+    {{userName}}
+
+    <input
+  [ngModel]="currentHero.name"
+  (ngModelChange)="currentHero.name=$event">
+
+<br>
+<input
+  [ngModel]="currentHero.name"
+  (ngModelChange)="setUppercaseName($event)">
+
+
+

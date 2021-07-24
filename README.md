@@ -3,13 +3,12 @@ Interpolation
 attr-binding
 class-binding
 container-demo
-content-demo
-directives
+directives---
 event-binding
 pipe-demo
 property-binding
 style-binding
-template-demo
+template-tag
 templated-reference
 Two way-binding
 # Basic

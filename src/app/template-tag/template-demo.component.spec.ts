@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ContentDemoComponent } from './content-demo.component';
+import { TemplateDemoComponent } from './template-tag.component';
 
-describe('ContentDemoComponent', () => {
-  let component: ContentDemoComponent;
-  let fixture: ComponentFixture<ContentDemoComponent>;
+describe('TemplateDemoComponent', () => {
+  let component: TemplateDemoComponent;
+  let fixture: ComponentFixture<TemplateDemoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ContentDemoComponent ]
+      declarations: [ TemplateDemoComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ContentDemoComponent);
+    fixture = TestBed.createComponent(TemplateDemoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

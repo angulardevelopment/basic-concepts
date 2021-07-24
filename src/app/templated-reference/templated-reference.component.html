@@ -1,1 +1,5 @@
-<p>templated-reference works!</p>
+<label>Type something:
+    <input #customerInput>{{customerInput.value}}
+  </label>
+
+  <button (click)="callValue(customerInput.value)">Call</button>

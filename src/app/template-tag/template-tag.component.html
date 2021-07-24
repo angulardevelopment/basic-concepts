@@ -1,0 +1,13 @@
+<p *ngIf="serverCreated;then firstTemp else noserver"></p>
+
+<ng-template #firstTemp>
+
+Content displayed if expression returns true
+
+</ng-template>
+
+<ng-template #noserver>
+
+<p>No server is created </p>
+
+</ng-template>

@@ -12,4 +12,7 @@ export class TemplatedReferenceComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  callValue(str){
+    alert(str);
+  }
 }

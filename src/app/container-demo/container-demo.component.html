@@ -1,1 +1,27 @@
-<p>container-demo works!</p>
+
+<!-- problem -->
+<!-- <div class="lesson" *ngIf="lessons"
+       *ngFor="let lesson of lessons">
+    <div class="lesson-detail">
+        {{lesson | json}}
+    </div>
+</div>   -->
+
+<div *ngIf="lessons">
+<div class="lesson"
+       *ngFor="let lesson of lessons">
+    <div class="lesson-detail">
+        {{lesson | json}}
+    </div>
+</div>
+</div>
+
+<ng-container *ngIf="lessons">
+    <div class="lesson" *ngFor="let lesson of lessons">
+        <div class="lesson-detail">
+            {{lesson | json}}
+        </div>
+    </div>
+</ng-container>
+
+

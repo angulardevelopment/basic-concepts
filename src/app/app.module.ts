@@ -13,9 +13,11 @@ import { TwowayBindingComponent } from './twoway-binding/twoway-binding.componen
 import { DirectivesComponent } from './directives/directives.component';
 import { TemplatedReferenceComponent } from './templated-reference/templated-reference.component';
 import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
-import { TemplateDemoComponent } from './template-demo/template-demo.component';
-import { ContentDemoComponent } from './content-demo/content-demo.component';
+import { TemplateDemoComponent } from './template-tag/template-tag.component';
+
 import { ContainerDemoComponent } from './container-demo/container-demo.component';
+import { FormsModule } from '@angular/forms';
+import { ExponentialStrengthPipe } from './pipe-demo/exponential-strength.pipe';
 
 @NgModule({
   declarations: [
@@ -31,12 +33,13 @@ import { ContainerDemoComponent } from './container-demo/container-demo.componen
     TemplatedReferenceComponent,
     PipeDemoComponent,
     TemplateDemoComponent,
-    ContentDemoComponent,
-    ContainerDemoComponent
+    ContainerDemoComponent,
+    ExponentialStrengthPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

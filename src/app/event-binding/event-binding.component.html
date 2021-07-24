@@ -1,1 +1,29 @@
-<p>event-binding works!</p>
+
+<button (click)="onSave()">Save</button>
+
+<button on-click="onSave()">On Save</button>
+
+<div>
+<!-- `myClick` is an event on the custom `ClickDirective` -->
+<div (myClick)="clickMessage=$event" clickable>click with myClick</div>
+{{clickMessage}}
+</div>
+
+
+<br>
+
+
+
+<div class="parent-div" (click)="onClickMe($event)" clickable>Click me
+  <div class="child-div">Click me too!</div>
+</div>
+
+<!-- Will save only once -->
+<div (click)="onSave()" clickable>
+  <button (click)="onSave($event)">Save, no propagation</button>
+</div>
+
+<!-- Will save twice -->
+<div (click)="onSave()" clickable>
+  <button (click)="onSave()">Save w/ propagation</button>
+</div>

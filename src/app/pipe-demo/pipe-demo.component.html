@@ -1,1 +1,36 @@
-<p>pipe-demo works!</p>
+
+<div>
+  {{ amount | currency:'EUR' }}
+</div>
+
+<div>
+  {{ arr | slice:1:5 }}
+</div>
+
+
+<div>
+  {{ 2 | exponentialStrength:10 }}
+</div>
+
+<p>The hero's birthday is {{ birthday | date }}</p>
+
+
+<div>Title through uppercase pipe: {{title | uppercase}}</div>
+
+<!-- Pipe chaining: convert title to uppercase, then to lowercase -->
+<div>
+  Title through a pipe chain:
+  {{title | uppercase | lowercase}}
+</div>
+
+<!-- pipe with configuration argument => "February 25, 1970" -->
+<div>Birthdate: {{currentHero?.birthdate | date:'longDate'}}</div>
+
+<div>{{currentHero | json}}</div>
+
+<div>Birthdate: {{(currentHero?.birthdate | date:'longDate') | uppercase}}</div>
+
+<div>
+  <!-- pipe price to USD and display the $ symbol -->
+  <label>Price: </label>{{product.price | currency:'USD':'symbol'}}
+</div>
