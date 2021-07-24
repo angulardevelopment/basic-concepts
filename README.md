@@ -1,3 +1,17 @@
+# concepts included
+Interpolation
+attr-binding
+class-binding
+container-demo
+content-demo
+directives
+event-binding
+pipe-demo
+property-binding
+style-binding
+template-demo
+templated-reference
+Two way-binding
 # Basic
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.3.
