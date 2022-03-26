@@ -4,16 +4,24 @@
 
 <h4>{{recommended}}</h4>
 
-
-
-
-<img src="{{itemImageUrl2}}" style="height:30px">
+<img src="{{itemImageUrl2}}">
 <!-- Interpolation and expressions -->
 
-
+<p>{{getData()}}</p>
 
 <!-- "The sum of 1 + 1 is not 4" -->
 <p>The sum of 1 + 1 is not {{1 + 1 + getVal()}}</p>
+
+<ul>
+    <li *ngFor="let customer of customers">{{customer.name}}</li>
+  </ul>
+
+  <label>Type something:
+    <input #customerInput>
+  </label>
+
+  <button (click)="changeTitle(customerInput.value)">Click Me</button>
+
 
 
 

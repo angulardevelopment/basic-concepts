@@ -18,6 +18,7 @@ import { TemplateDemoComponent } from './template-tag/template-tag.component';
 import { ContainerDemoComponent } from './container-demo/container-demo.component';
 import { FormsModule } from '@angular/forms';
 import { ExponentialStrengthPipe } from './pipe-demo/exponential-strength.pipe';
+import { NgclassComponent } from './ngclass/ngclass.component';
 
 @NgModule({
   declarations: [
@@ -34,10 +35,13 @@ import { ExponentialStrengthPipe } from './pipe-demo/exponential-strength.pipe';
     PipeDemoComponent,
     TemplateDemoComponent,
     ContainerDemoComponent,
-    ExponentialStrengthPipe
+    ExponentialStrengthPipe,
+    NgclassComponent
   ],
   imports: [
+    // BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserModule,
+
     AppRoutingModule,
     FormsModule,
   ],

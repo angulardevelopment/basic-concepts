@@ -11,6 +11,9 @@ style-binding
 template-tag
 templated-reference
 Two way-binding
+
+
+ng generate component ngclass --module app
 # Basic
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.3.

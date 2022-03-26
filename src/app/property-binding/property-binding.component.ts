@@ -11,6 +11,7 @@ export class PropertyBindingComponent implements OnInit {
   classes = 'special';
   title = 'Template Syntax';
   evilTitle = 'Template <script>alert("evil never sleeps")</script>Syntax';
+  imageName = "logo-nav2x.png";
   constructor() { }
 
   ngOnInit(): void {
