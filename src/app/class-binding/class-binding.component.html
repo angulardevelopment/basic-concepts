@@ -1,66 +1,64 @@
-<p [class.sale]="onSale">
-Test sale
-</p>
+<!-- <p [class]="classExpression">Basic Test classExpression</p>
+<hr />
 
-<p [class]="classExpression">
-  Test classExpression
-  </p>
-
-  <p [class]="{foo: true, bar: false}">
-    Test object class
-    </p>
-
-
-<!-- standard class attribute setting  -->
-<div class="bad curly special">Bad curly special</div>
-
-<!-- reset/override all class names with a binding  -->
-<div class="bad curly special"
-     [class]="badCurly">Bad curly</div>
-
-<!-- toggle the "special" class on/off with a property -->
+<p [class.sale]="onSale">Test sale</p>
+toggle the "special" class on/off with a property
 <div [class.special]="isSpecial">The class binding is special</div>
+<hr />
 
-<!-- binding to `class.special` trumps the class attribute -->
-<div class="special"
-     [class.special]="!isSpecial">This one is not so special</div>
+<p [class]="{ foo: true, bar: false }">Test object class</p>
+<hr />
 
+
+<div class="bad curly special"> standard class attribute setting </div>
+
+ 
+<div [class]="badCurly" class="bad curly class">
+  standard class and class binding - reset/override all class names with a binding 
+</div>
+
+ 
+<div class="special2" [class.special]="!isSpecial2">
+  This one is not so special - binding to `class.special` trumps the class attribute 
+</div>
+<hr />
+
+<p [class.my-class]="step=='step1'">Test sale</p>
+
+ 
 <div bind-class.special="isSpecial">This class binding is special too</div>
+<hr> -->
 
+<div [ngClass]="{ 'my-class': step == 'step1' }">With multiple option:</div>
 
-<div [ngClass]="{'my-class': step=='step1'}">With multiple option:</div>
+<div [ngClass]="{ 'my-class': step == 'step1', 'my-class2': step == 'step2' }">
+  using dynamic counter
+</div>
 
-<div [ngClass]="{'my-class': step=='step1', 'my-class2':step=='step2' }">using dynamic counter</div>
-
-
-
-<div [ngClass]="(step =='step1') ? 'my-class1': 'my-class2'">using ternary operator</div>
-
-<p>currentClasses is {{currentClasses | json}}</p>
-<div [ngClass]="currentClasses">This div is initially saveable, unchanged, and special</div>
-
-<!-- not used in chapter -->
-<br>
-<label>saveable   <input type="checkbox" [(ngModel)]="canSave"></label> |
-<label>modified:  <input type="checkbox" [value]="!isUnchanged" (change)="isUnchanged=!isUnchanged"></label> |
-<label>special:   <input type="checkbox" [(ngModel)]="isSpecial"></label>
-<button (click)="setCurrentClasses()">Refresh currentClasses</button>
-<br><br>
-<div [ngClass]="currentClasses">
-  This div should be {{ canSave ? "": "not"}} saveable,
-                  {{ isUnchanged ? "unchanged" : "modified" }} and,
-                  {{ isSpecial ? "": "not"}} special after clicking "Refresh".</div>
-<br><br>
+<div [ngClass]="step == 'step1' ? 'my-class1' : 'my-class2'">
+  using ternary operator
+</div>
 
 <div [ngClass]="isSpecial ? 'special' : ''">This div is special</div>
 
-<div class="bad curly special">Bad curly special</div>
-<div [ngClass]="{'bad':false, 'curly':true, 'special':true}">Curly special</div>
+<div [ngClass]="{ bad: true, curly: true, special: true }">Curly special</div>
 
-<div [ngClass]="{'1':'my-class1','2':'my-class2','3':'my-class4'}[step]">using dynamic counter
+<div [ngClass]="{ '1': 'my-class1', '2': 'my-class2', '3': 'my-class4' }[step]">
+  step counter
 </div>
 
+<hr>
 
+<div [ngClass]="currentClasses">
+  This div is initially saveable, unchanged, and special
+</div>
+
+<div [ngClass]="currentClasses">
+after update
+</div>
+
+<br />
+<button (click)="setCurrentClasses()">Refresh currentClasses</button>
 
 
 

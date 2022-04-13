@@ -10,7 +10,8 @@ export class ClassBindingComponent implements OnInit {
   classExpression = "my-class-1 my-class-2 my-class-3";
   badCurly = 'bad curly';
   isSpecial = true;
-  step='step1';
+  isSpecial2 = false;
+  step='1';
   currentClasses: Record<string, boolean> = {};
   canSave = true;
   isUnchanged = true;
@@ -25,7 +26,7 @@ export class ClassBindingComponent implements OnInit {
     // CSS classes: added/removed per current state of component properties
     this.currentClasses = {
       saveable: this.canSave,
-      modified: !this.isUnchanged,
+      modified: this.isUnchanged,
       special: this.isSpecial
     };
   }
