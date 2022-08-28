@@ -24,4 +24,23 @@
     </div>
 </ng-container>
 
+   
+   <ng-container *ngIf="condition">
+    <div *ngFor="let item of items">{{ item }}</div>
+   </ng-container>
+   
+<span>I am span 1</span>
+ <ng-container #vc></ng-container>
+ <span>I am span 2</span>
 
+<ng-template #tpl>
+ <span>I am a span in template</span>
+ </ng-template>
+
+
+ <ng-container *ngFor="let shape of comps">
+    <ng-container *ngComponentOutlet="shape">
+    </ng-container>
+   </ng-container>
+   
+ 

@@ -1,5 +1,10 @@
 <label>Type something:
-    <input #customerInput>{{customerInput.value}}
+  <input #customerInput placeholder="customerInput">{{customerInput.value}}
   </label>
 
   <button (click)="callValue(customerInput.value)">Call</button>
+
+  <p> nested template - changing the text in the input changes the value in the span because Angular immediately updates changes through the template variable newref.</p>
+  <input #newref type='text' [(ngModel)]='newExample' />
+  <span *ngIf='true'>Value: {{ newref.value }}</span>
+  

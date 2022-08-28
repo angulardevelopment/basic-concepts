@@ -2,10 +2,15 @@
 <div>
   {{ amount | currency:'EUR' }}
 </div>
+<p>{{ 1234.56 | currency:"GBP" }}</p>
 
 <div>
   {{ arr | slice:1:5 }}
 </div>
+<ul>
+<li *ngFor="let item of items | slice:0:1">{{ item }}</li>
+
+</ul>
 
 
 <div>
@@ -16,6 +21,7 @@
 
 
 <div>Title through uppercase pipe: {{title | uppercase}}</div>
+<h2>{{title | lowercase}}</h2>
 
 <!-- Pipe chaining: convert title to uppercase, then to lowercase -->
 <div>
@@ -26,6 +32,12 @@
 <!-- pipe with configuration argument => "February 25, 1970" -->
 <div>Birthdate: {{currentHero?.birthdate | date:'longDate'}}</div>
 
+<h2>{{currentHero?.birthdate | date:'shortDate'}}</h2>
+<h2>{{currentHero?.birthdate | date:'fullDate'}}</h2>
+
+<h2>{{currentHero?.birthdate | date:'fullDate' | uppercase}}</h2>
+<p>{{ currentHero?.birthdate | date: 'd/M/y' }}</p>
+
 <div>{{currentHero | json}}</div>
 
 <div>Birthdate: {{(currentHero?.birthdate | date:'longDate') | uppercase}}</div>
@@ -34,3 +46,31 @@
   <!-- pipe price to USD and display the $ symbol -->
   <label>Price: </label>{{product.price | currency:'USD':'symbol'}}
 </div>
+
+
+<ul>
+<li *ngFor="let word of words; keyvalue">
+
+{{ word.key }}: {{ word.value }}
+
+</li>
+
+</ul>
+
+<p ngNonBindable>{{ 3.14159265 | number: '3.1-2' }}</p>
+
+<p>{{ 3.14159265 | number: '3.1-2' }}</p>
+
+
+<p> {{'hello mY friend' | titlecase}}</p>
+
+<ul>
+
+
+<h2 *ngIf="!countCompleted">{{ count$ | async }}</h2>
+
+<h2 *ngIf="countCompleted">{{ message }}</h2>
+
+
+
+<p>{{arr | sort: "descending"}}</p>

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./templated-reference.component.scss']
 })
 export class TemplatedReferenceComponent implements OnInit {
-
+  newExample = 'test';
   constructor() { }
 
   ngOnInit(): void {

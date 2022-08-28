@@ -1,7 +1,18 @@
 <h2 id="property-binding">Property Binding</h2>
 
 <span [hidden]="isUnchanged">changed</span>
+
+<div class="card card-block" *ngFor="let joke of data">
+
+<h4 class="card-title">{{joke.setup}}</h4>
+
+<p class="card-text" [hidden]="joke.hide">{{joke.punchline}}</p>
+
+</div>
+
 <button [disabled]="isUnchanged">Cancel is disabled</button>
+
+
 
 <div [ngClass]="classes">[ngClass] binding to the classes property</div>
 
@@ -26,3 +37,14 @@
 <div>
   <img src="https://angular.io/assets/images/logos/angular/{{imageName}}">            
 </div>
+
+
+<ul>
+
+  <li *ngFor="let item of items" #elem [id]="item.id">
+  
+  {{ item.name}} ID: {{elem.id}}
+  
+  </li>
+  
+  </ul>

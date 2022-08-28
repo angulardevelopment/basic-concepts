@@ -11,7 +11,7 @@ export class StyleBindingComponent implements OnInit {
   canSave = true;
   employeeList = [{ name: 'smith', country: 'UK' }, { name: 'Meyers', country: 'USA' }];
   fontSizePx = 16;
-
+  PrintButton = true
 
 
   constructor() { }
@@ -27,4 +27,20 @@ export class StyleBindingComponent implements OnInit {
   return 'blue';
   }
 }
+
+randomcolor = "#4bacc6";
+
+getRandomColor() {
+let letters = "0123456789ABCDEF".split("");
+let color = "#";
+for (let index = 0; index < 6; index++) {
+color += letters[Math.floor(Math.random() * 16)];
+}
+return color;
+}
+
+setColor() {
+  var color = this.getRandomColor();
+  this.randomcolor = color;
+  }
 }

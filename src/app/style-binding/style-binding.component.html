@@ -10,10 +10,20 @@
 
 <div [style.font-size.px]="fontSizePx">Resizable Text</div>
 
-<h4>Ng style example</h4>
+<h4 [ngStyle]="{'background-color':PrintButton=== true ? '#285574' : 'grey' }">Print Report</h4>
 <ul *ngFor= " let employee of employeeList">
 <li [ngStyle]="{'color': getColor(employee.country)}">{{employee.name}} ({{employee.country}})</li>
 </ul>
 
+<div [style.color]="randomcolor"> random color print </div>
+<button (click)="setColor()"> Set my color </button>
+
+
+
+<p>add a dynamic background image</p>
+
+<div [style.background-image]="'url(&quot' + 'photo' + '&quot;)'"></div>
+
+<p [ngStyle]="{'background-image':' url(' + 'urllink' + ')'}"></p>
 
 

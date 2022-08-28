@@ -9,7 +9,8 @@ export class AttrBindingComponent implements OnInit {
   value = 0;
   actionName = 'Go for it';
   isUnchanged = true;
-
+  value1=2;
+  flag = true;
   constructor() { }
 
   ngOnInit(): void {

@@ -1,6 +1,6 @@
-<!-- <p [class]="classExpression">Basic Test classExpression</p>
+<p [class]="classExpression">Basic Test classExpression</p>
 <hr />
-
+<!-- [class]=”my-class-1 my-class-2 my-class-3“. -->
 <p [class.sale]="onSale">Test sale</p>
 toggle the "special" class on/off with a property
 <div [class.special]="isSpecial">The class binding is special</div>
@@ -12,7 +12,7 @@ toggle the "special" class on/off with a property
 
 <div class="bad curly special"> standard class attribute setting </div>
 
- 
+
 <div [class]="badCurly" class="bad curly class">
   standard class and class binding - reset/override all class names with a binding 
 </div>
@@ -27,7 +27,7 @@ toggle the "special" class on/off with a property
 
  
 <div bind-class.special="isSpecial">This class binding is special too</div>
-<hr> -->
+<hr>
 
 <div [ngClass]="{ 'my-class': step == 'step1' }">With multiple option:</div>
 
@@ -42,9 +42,10 @@ toggle the "special" class on/off with a property
 <div [ngClass]="isSpecial ? 'special' : ''">This div is special</div>
 
 <div [ngClass]="{ bad: true, curly: true, special: true }">Curly special</div>
-
+<!-- [ngClass]=”{‘my-class’: step==’step1', ‘my-class2’:step==’step2' }” multiple-->
+<!-- [ngClass]=”{‘my-class’: step==’step1'}” single -->
 <div [ngClass]="{ '1': 'my-class1', '2': 'my-class2', '3': 'my-class4' }[step]">
-  step counter
+  Dynamic step counter
 </div>
 
 <hr>

@@ -57,3 +57,9 @@ Example4-
 
 <!-- we'd have to remove it with property binding -->
 <button [disabled]="false" (click)="test(1)">Enabled (but inert)</button>
+
+
+
+<button [attr.disabled]="value1>=1 ? true : null">Hello world</button>
+<p [attr.id]="value1"></p>
+<p [attr.style]="flag? 'background-color:red !important': 'background-color:blue'"></p>

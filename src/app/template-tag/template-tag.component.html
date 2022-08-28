@@ -11,3 +11,29 @@ Content displayed if expression returns true
 <p>No server is created </p>
 
 </ng-template>
+
+
+<ng-template #myTemplateRef> 
+ This is a partial template 
+</ng-template>
+
+<div *ngTemplateOutlet="myTemplateRef">
+</div>
+
+
+<ng-template let-message="myMessage" #myTemplateRef> 
+{{message}}
+</ng-template>
+
+<div *ngTemplateOutlet="myTemplateRef; context:{myMessage: 'This is a partial template'}">
+</div>
+
+<!-- main.component.html
+<ng-template #theTruth>
+ <h4>hello world</h4>
+</ng-template>
+<app-heading [title]=”theTruth”> </app-heading>
+
+heading.component.html
+<ng-container *ngTemplateOutlet=”title”></ng-container>
+@Input() title; -->
