@@ -9,6 +9,7 @@ export class TwowayBindingComponent implements OnInit {
   userName = "jbond";
   currentHero!: Hero;
   heroes: Hero[] = [];
+  currentSpec ='';
 
   constructor() { }
 
@@ -18,7 +19,8 @@ export class TwowayBindingComponent implements OnInit {
 
   }
   setUppercaseName(name: string) {
-    this.currentHero.name = name.toUpperCase();
+    console.log(name, 'name');
+    this.currentSpec = name.toUpperCase();
   }
 
 }

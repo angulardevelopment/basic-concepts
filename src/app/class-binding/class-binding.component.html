@@ -29,21 +29,20 @@ toggle the "special" class on/off with a property
 <div bind-class.special="isSpecial">This class binding is special too</div>
 <hr>
 
-<div [ngClass]="{ 'my-class': step == 'step1' }">With multiple option:</div>
+<div [ngClass]="{ 'my-class': stepCond == 'step1' }">With one condition</div>
 
 <div [ngClass]="{ 'my-class': step == 'step1', 'my-class2': step == 'step2' }">
-  using dynamic counter
+with multiple conditions
 </div>
 
 <div [ngClass]="step == 'step1' ? 'my-class1' : 'my-class2'">
-  using ternary operator
+  with ternary operator
 </div>
 
 <div [ngClass]="isSpecial ? 'special' : ''">This div is special</div>
 
-<div [ngClass]="{ bad: true, curly: true, special: true }">Curly special</div>
-<!-- [ngClass]=”{‘my-class’: step==’step1', ‘my-class2’:step==’step2' }” multiple-->
-<!-- [ngClass]=”{‘my-class’: step==’step1'}” single -->
+<div [ngClass]="{ bad: true, curly: false, special: true }">Curly special</div>
+
 <div [ngClass]="{ '1': 'my-class1', '2': 'my-class2', '3': 'my-class4' }[step]">
   Dynamic step counter
 </div>
@@ -51,15 +50,12 @@ toggle the "special" class on/off with a property
 <hr>
 
 <div [ngClass]="currentClasses">
-  This div is initially saveable, unchanged, and special
-</div>
+  initially this div has no class
 
-<div [ngClass]="currentClasses">
-after update
+  This div after calling setCurrentClasses it adds saveable, unchanged, and special classes
 </div>
-
-<br />
 <button (click)="setCurrentClasses()">Refresh currentClasses</button>
+
 
 
 

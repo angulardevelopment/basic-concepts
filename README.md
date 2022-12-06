@@ -13,6 +13,8 @@ template-tag
 templated-reference
 Two way-binding
 
+ng g c templated-reference/test --skip-import
+
 [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/angulardevelopment/basic-concepts?logo=github&style=social)](https://github.com/angulardevelopment/) [![GitHub last commit](https://img.shields.io/github/last-commit/angulardevelopment/basic-concepts?style=social&logo=git)](https://github.com/angulardevelopment/) [![GitHub stars](https://img.shields.io/github/stars/angulardevelopment/basic-concepts?style=social)](https://github.com/angulardevelopment/basic-concepts/stargazers) [![GitHub forks](https://img.shields.io/github/forks/angulardevelopment/basic-concepts?style=social&logo=git)](https://github.com/angulardevelopment/basic-concepts/network)
 
 <p align="center">

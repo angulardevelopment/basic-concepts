@@ -10,43 +10,64 @@ import { map, takeWhile, finalize } from "rxjs/operators";
 })
 export class PipeDemoComponent implements OnInit {
   amount = '5';
-  arr = [1,2, 3, 4, 5,6 ,7];
-    birthday = new Date(1988, 3, 15);
+  arr = [1, 2, 3, 4, 5, 6, 7];
+  birthday = new Date(1988, 3, 15);
   title = 'Template Syntax';
   product = {
     name: 'frimfram',
     price: 42
   };
-  currentHero = {birthdate: new Date(1970, 1, 25)};
-  words = [{'key':'ab', value:'cd'}];
+  currentHero = { birthdate: new Date(1970, 1, 25) };
+  words = [{ 'key': 'ab', value: 'cd' }];
   items = ["Angular", "React"];
 
   constructor() { }
 
-  
 
-countCompleted = false;
 
-countDown = 5;
+  countCompleted = false;
 
-count$: Observable<number>;
+  countDown = 5;
 
-message = "Happy Birthday!";
+  count$: Observable<number>;
 
-ngOnInit() {
+  message = "Happy Birthday!";
 
-const timer = interval(1000);
+  ngOnInit() {
 
-this.count$ = timer.pipe(
+    const timer = interval(1000);
 
-map(i => this.countDown - i),
+    this.count$ = timer.pipe(
 
-takeWhile(i => i > 0),
+      map(i => this.countDown - i),
 
-finalize(() => (this.countCompleted = true))
+      takeWhile(i => i > 0),
 
-);
+      finalize(() => (this.countCompleted = true))
+
+    );
+
+  }
+
+  addPure = (v1, v2) => { return v1 + v2; };
+
+  addImpure = (() => {
+
+    let state = 0;
+    
+    return (v) => {
+    
+    return state += v;
+    
+    }
+    
+    })();
+
+    test(){
+      this.addPure(2, 3);
+      this.addImpure(5);
+    }
 
 }
 
-}
+

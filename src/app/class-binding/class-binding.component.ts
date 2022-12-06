@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./class-binding.component.scss']
 })
 export class ClassBindingComponent implements OnInit {
+  stepCond = 'step1';
   onSale = true;
   classExpression = "my-class-1 my-class-2 my-class-3";
   badCurly = 'bad curly';

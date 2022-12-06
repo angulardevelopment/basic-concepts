@@ -1,14 +1,11 @@
-User Name: <input type="text" [(ngModel)]="userName"  ><br/>
-    {{userName}}
-
-    <input
-  [ngModel]="currentHero.name"
-  (ngModelChange)="currentHero.name=$event">
-
+<div>
+  User Name: <input type="text" [(ngModel)]="userName"> <span>{{userName}}</span>
+</div>
 <br>
-<input
-  [ngModel]="currentHero.name"
-  (ngModelChange)="setUppercaseName($event)">
-
-
-
+<div>
+  <input [ngModel]="currentHero.name" (ngModelChange)="currentHero.name=$event">
+  <input [ngModel]="currentHero.name">
+</div>
+<br>
+<input [ngModel]="currentSpec" (ngModelChange)="setUppercaseName($event)">
+<input [ngModel]="currentSpec">

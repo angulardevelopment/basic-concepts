@@ -6,24 +6,25 @@
 <button [style.background-color]="canSave ? 'cyan': 'grey'" >Save</button>
 <button [style.font-size.em]="isSpecial ? 3 : 1" >Big</button>
 <button [style.font-size.%]="!isSpecial ? 150 : 50" >Small</button>
+
 <label>FontSize (px): <input [(ngModel)]="fontSizePx"></label>
-
 <div [style.font-size.px]="fontSizePx">Resizable Text</div>
-
-<h4 [ngStyle]="{'background-color':PrintButton=== true ? '#285574' : 'grey' }">Print Report</h4>
-<ul *ngFor= " let employee of employeeList">
-<li [ngStyle]="{'color': getColor(employee.country)}">{{employee.name}} ({{employee.country}})</li>
-</ul>
 
 <div [style.color]="randomcolor"> random color print </div>
 <button (click)="setColor()"> Set my color </button>
 
-
-
 <p>add a dynamic background image</p>
 
-<div [style.background-image]="'url(&quot' + 'photo' + '&quot;)'"></div>
 
-<p [ngStyle]="{'background-image':' url(' + 'urllink' + ')'}"></p>
+<h4 [ngStyle]="{'background-color':PrintButton=== false ? '#285574' : 'grey' }">Print Report</h4>
+<div [ngStyle]="{'background-image':' url(' + 'https://i.picsum.photos/id/556/200/300.jpg?hmac=TLwE28gIMuw2BUTndMuC3hoTlK6FtrE6Mx1UnR2dzu8' + ')'}" class="test">div element</div>
+
+<ul *ngFor= " let employee of employeeList">
+<li [ngStyle]="{'color': getColor(employee.country)}">
+    {{employee.name}} ({{employee.country}})
+</li>
+</ul>
+
+
 
 

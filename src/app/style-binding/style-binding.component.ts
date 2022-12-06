@@ -18,29 +18,29 @@ export class StyleBindingComponent implements OnInit {
 
   ngOnInit(): void {
   }
- // Here we are going to update colour based on the country.
- getColor(country) {
-  switch (country) {
-  case 'UK':
-  return 'green';
-  case 'USA':
-  return 'blue';
+  // Here we are going to update colour based on the country.
+  getColor(country) {
+    switch (country) {
+      case 'UK':
+        return 'green';
+      case 'USA':
+        return 'blue';
+    }
   }
-}
 
-randomcolor = "#4bacc6";
+  randomcolor = "#4bacc6";
 
-getRandomColor() {
-let letters = "0123456789ABCDEF".split("");
-let color = "#";
-for (let index = 0; index < 6; index++) {
-color += letters[Math.floor(Math.random() * 16)];
-}
-return color;
-}
+  getRandomColor() {
+    let letters = "0123456789ABCDEF".split("");
+    let color = "#";
+    for (let index = 0; index < 6; index++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
 
-setColor() {
-  var color = this.getRandomColor();
-  this.randomcolor = color;
+  setColor() {
+    const color = this.getRandomColor();
+    this.randomcolor = color;
   }
 }

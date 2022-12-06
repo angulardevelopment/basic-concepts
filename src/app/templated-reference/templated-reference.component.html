@@ -1,10 +1,92 @@
 <label>Type something:
   <input #customerInput placeholder="customerInput">{{customerInput.value}}
-  </label>
+</label>
+<button (click)="callValue(customerInput.value)">Call</button>
 
-  <button (click)="callValue(customerInput.value)">Call</button>
+<p> nested template - changing the text in the input changes the value in the span because Angular immediately updates  changes through the template variable newref.</p>
+<input #newref type='text' [(ngModel)]='newExample' />
+<span *ngIf='true'>Value: {{ newref.value }}</span>
 
-  <p> nested template - changing the text in the input changes the value in the span because Angular immediately updates changes through the template variable newref.</p>
-  <input #newref type='text' [(ngModel)]='newExample' />
-  <span *ngIf='true'>Value: {{ newref.value }}</span>
-  
+<div id="test-div" #myTestDiv>
+</div>
+
+<!-- You have selected {{customerListComponent.selectedCustomer?.name}}
+<app-test #customerListComponent></app-test> -->
+
+You have selected {{customerList.selectedCustomer?.name}}
+<app-test #customerList="customerList"></app-test>
+
+<app-test #mytestcomp=""></app-test>
+
+<p>
+ <label for="firstName">First Name</label>
+ <input (keyup)="0" type="text" #firstName id="firstName">
+</p>
+ 
+<p>
+ <label for="lastName">Last Name</label>
+ <input (keyup)="0" type="text" #lastName id="lastName">
+</p>
+ 
+<b>Welcome {{firstName.value}} {{lastName.value}} </b>
+
+<form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+
+  <pre>Value : {{contactForm.value | json }} </pre>
+<pre>Valid : {{contactForm.valid}} </pre>
+<pre>Touched : {{contactForm.touched  }} </pre>
+<pre>Submitted : {{contactForm.submitted  }} </pre>
+
+
+
+
+<section>
+  <form>
+    <div class="form-group">
+     <label for="exampleInputEmail1">User name</label>
+     <input class="form-control" [(ngModel)]="user.name" name="name" required 
+       minlength="4" #nameCtrl="ngModel">
+     </div>
+     <div *ngIf="nameCtrl.touched" class="invalid-feedback">
+       <p *ngIf="nameCtrl.errors?.required">
+        Name is a required field!
+       </p>
+       <p *ngIf="nameCtrl.errors?.minlength">
+        Please enter name with minimum 4 character
+       </p>
+     </div>
+ 
+     <div class="form-group">
+       <label for="exampleInputEmail1">User email</label>
+       <input class="form-control" type="email" [(ngModel)]="user.email"     
+        name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required 
+        #emailCtrl="ngModel">
+     </div>
+     <div *ngIf="emailCtrl.touched" class="invalid-feedback">
+       <p *ngIf="emailCtrl.errors?.required">Email is a required field!</p>
+       <p *ngIf="emailCtrl.errors?.pattern">This is not a valid Email!!!</p>
+     </div>
+ 
+     <div class="form-group">
+       <label for="exampleInputPassword1">User Age</label>
+       <input class="form-control" [(ngModel)]="user.age" name="age" type="number" 
+       #ageCtrl="ngModel" required>
+     </div>
+ 
+     <div class="invalid-feedback" *ngIf="ageCtrl.errors?.required && 
+       ageCtrl.touched">
+       Age is required
+     </div>
+ 
+     <button (click)="setUserData()" class="btn btn-primary">
+       Set data from Model to View
+     </button>
+   </form>
+   <div>
+     <span>Name: {{ user.name }}</span>
+     <span>Email: {{ user.email }}</span>
+     <span>Age: {{ user.age }}</span>
+   </div>
+ </section>
+
+

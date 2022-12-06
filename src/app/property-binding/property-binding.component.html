@@ -1,29 +1,40 @@
 <h2 id="property-binding">Property Binding</h2>
 
-<span [hidden]="isUnchanged">changed</span>
+<span [hidden]="isUnchanged">span hidden element</span>
 
 <div class="card card-block" *ngFor="let joke of data">
 
-<h4 class="card-title">{{joke.setup}}</h4>
+  <h4 class="card-title">{{joke.setup}}</h4>
 
-<p class="card-text" [hidden]="joke.hide">{{joke.punchline}}</p>
+  <p class="card-text" [hidden]="joke.hide">{{joke.punchline}}</p>
 
 </div>
 
-<button [disabled]="isUnchanged">Cancel is disabled</button>
-
-
+<button [disabled]="isUnchanged">button disabled</button>
 
 <div [ngClass]="classes">[ngClass] binding to the classes property</div>
 
 
 <img bind-src="heroImageUrl">
-
-
 <p><img src="{{heroImageUrl}}"> is the <i>interpolated</i> image.</p>
 <p><img [src]="heroImageUrl"> is the <i>property bound</i> image.</p>
 
-<p><span>"{{title}}" is the <i>interpolated</i> title.</span></p>
+<div>
+  <img src="https://angular.io/assets/images/logos/angular/{{imageName}}">
+</div>
+
+
+<ul>
+
+  <li *ngFor="let item of items" #elem [id]="item.id">
+
+    {{ item.name}} ID: {{elem.id}}
+
+  </li>
+
+</ul>
+
+<p><span>"{{title}}"</span> is the <i>interpolated</i> title.</p>
 <p>"<span [innerHTML]="title"></span>" is the <i>property bound</i> title.</p>
 
 <!--
@@ -32,19 +43,3 @@
  -->
 <p><span>"{{evilTitle}}" is the <i>interpolated</i> evil title.</span></p>
 <p>"<span [innerHTML]="evilTitle"></span>" is the <i>property bound</i> evil title.</p>
-
-
-<div>
-  <img src="https://angular.io/assets/images/logos/angular/{{imageName}}">            
-</div>
-
-
-<ul>
-
-  <li *ngFor="let item of items" #elem [id]="item.id">
-  
-  {{ item.name}} ID: {{elem.id}}
-  
-  </li>
-  
-  </ul>
