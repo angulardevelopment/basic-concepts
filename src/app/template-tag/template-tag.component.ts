@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./template-demo.component.scss']
 })
 export class TemplateDemoComponent implements OnInit {
-  serverCreated = true;
+  serverCreated = false;
   constructor() { }
 
   ngOnInit(): void {

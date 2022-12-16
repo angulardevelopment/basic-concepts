@@ -20,6 +20,7 @@ import { FormsModule } from '@angular/forms';
 import { ExponentialStrengthPipe } from './pipe-demo/exponential-strength.pipe';
 import { SortPipe } from './pipe-demo/sort.pipe';
 import { TestComponent } from './templated-reference/test/test.component';
+import { HeadingComponent } from './template-tag/heading/heading.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { TestComponent } from './templated-reference/test/test.component';
     ContainerDemoComponent,
     ExponentialStrengthPipe,
     SortPipe,
-    TestComponent
+    TestComponent,
+    HeadingComponent
   ],
   imports: [
     // BrowserModule.withServerTransition({ appId: 'serverApp' }),

@@ -1,22 +1,20 @@
-
 <!-- problem -->
-<!-- <div class="lesson" *ngIf="lessons"
+<!-- <div class="lesson" *ngIf="showLesson"
        *ngFor="let lesson of lessons">
     <div class="lesson-detail">
         {{lesson | json}}
     </div>
 </div>   -->
 
-<div *ngIf="lessons">
-<div class="lesson"
-       *ngFor="let lesson of lessons">
-    <div class="lesson-detail">
-        {{lesson | json}}
+<div *ngIf="showLesson">
+    <div class="lesson" *ngFor="let lesson of lessons">
+        <div class="lesson-detail">
+            {{lesson | json}}
+        </div>
     </div>
 </div>
-</div>
 
-<ng-container *ngIf="lessons">
+<ng-container *ngIf="showLesson">
     <div class="lesson" *ngFor="let lesson of lessons">
         <div class="lesson-detail">
             {{lesson | json}}
@@ -24,23 +22,22 @@
     </div>
 </ng-container>
 
-   
-   <ng-container *ngIf="condition">
+
+<ng-container *ngIf="condition">
     <div *ngFor="let item of items">{{ item }}</div>
-   </ng-container>
-   
+</ng-container>
+
 <span>I am span 1</span>
- <ng-container #vc></ng-container>
- <span>I am span 2</span>
+<ng-container #vc>
 
+</ng-container>
+<span>I am span 2</span>
 <ng-template #tpl>
- <span>I am a span in template</span>
- </ng-template>
+    <span>I am a span in template</span>
+</ng-template>
 
 
- <ng-container *ngFor="let shape of comps">
+<ng-container *ngFor="let shape of comps">
     <ng-container *ngComponentOutlet="shape">
     </ng-container>
-   </ng-container>
-   
- 
+</ng-container>
