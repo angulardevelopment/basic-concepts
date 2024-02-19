@@ -21,6 +21,7 @@ import { ExponentialStrengthPipe } from './pipe-demo/exponential-strength.pipe';
 import { SortPipe } from './pipe-demo/sort.pipe';
 import { TestComponent } from './templated-reference/test/test.component';
 import { HeadingComponent } from './template-tag/heading/heading.component';
+import { SizerComponent } from './twoway-binding/sizer/sizer.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { HeadingComponent } from './template-tag/heading/heading.component';
     ExponentialStrengthPipe,
     SortPipe,
     TestComponent,
-    HeadingComponent
+    HeadingComponent,
+    SizerComponent
   ],
   imports: [
     // BrowserModule.withServerTransition({ appId: 'serverApp' }),

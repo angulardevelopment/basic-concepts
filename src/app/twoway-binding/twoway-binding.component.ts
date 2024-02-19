@@ -10,6 +10,7 @@ export class TwowayBindingComponent implements OnInit {
   currentHero!: Hero;
   heroes: Hero[] = [];
   currentSpec ='';
+  fontSizePx = 16;
 
   constructor() { }
 

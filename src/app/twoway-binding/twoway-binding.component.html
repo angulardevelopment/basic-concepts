@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
   User Name: <input type="text" [(ngModel)]="userName"> <span>{{userName}}</span>
 </div>
 <br>
@@ -8,4 +8,10 @@
 </div>
 <br>
 <input [ngModel]="currentSpec" (ngModelChange)="setUppercaseName($event)">
-<input [ngModel]="currentSpec">
+<input [ngModel]="currentSpec"> -->
+
+<app-sizer [(size)]="fontSizePx"></app-sizer>
+
+<div [style.font-size.px]="fontSizePx">Resizable Text</div>
+
+<app-sizer [size]="fontSizePx" (sizeChange)="fontSizePx=$event"></app-sizer>
