@@ -1,0 +1,8 @@
+<div class="form-input">
+  <input
+    type="number"
+    [(ngModel)]="factorialInput"
+    (change)="calculateFactorial()"
+  />
+</div>
+<div class="factorial-response">The response is {{ factorialResult }}</div>

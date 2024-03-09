@@ -22,6 +22,7 @@ import { SortPipe } from './pipe-demo/sort.pipe';
 import { TestComponent } from './templated-reference/test/test.component';
 import { HeadingComponent } from './template-tag/heading/heading.component';
 import { SizerComponent } from './twoway-binding/sizer/sizer.component';
+import { WebwokerDemoComponent } from './webwoker-demo/webwoker-demo.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { SizerComponent } from './twoway-binding/sizer/sizer.component';
     SortPipe,
     TestComponent,
     HeadingComponent,
-    SizerComponent
+    SizerComponent,
+    WebwokerDemoComponent
   ],
   imports: [
     // BrowserModule.withServerTransition({ appId: 'serverApp' }),
