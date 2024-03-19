@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TemplateDemoComponent implements OnInit {
   serverCreated = false;
+	test = {test1 : { test2: {test3: {test4: {demoval: 'test5'} }}}};
+
   constructor() { }
 
   ngOnInit(): void {

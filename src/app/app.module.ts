@@ -23,6 +23,7 @@ import { TestComponent } from './templated-reference/test/test.component';
 import { HeadingComponent } from './template-tag/heading/heading.component';
 import { SizerComponent } from './twoway-binding/sizer/sizer.component';
 import { WebwokerDemoComponent } from './webwoker-demo/webwoker-demo.component';
+import { AngularzoneComponent } from './angularzone/angularzone.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { WebwokerDemoComponent } from './webwoker-demo/webwoker-demo.component';
     TestComponent,
     HeadingComponent,
     SizerComponent,
-    WebwokerDemoComponent
+    WebwokerDemoComponent,
+    AngularzoneComponent
   ],
   imports: [
     // BrowserModule.withServerTransition({ appId: 'serverApp' }),

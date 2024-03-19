@@ -13,15 +13,15 @@ Content displayed if expression returns true
 </ng-template> -->
 
 
-<!-- <ng-template #myTemplateRef> 
- This is a partial template 
+<!-- <ng-template #myTemplateRef>
+ This is a partial template
 </ng-template>
 
 <div *ngTemplateOutlet="myTemplateRef">
 </div> -->
 
 
-<!-- <ng-template let-message="myMessage" #myTemplateRef> 
+<!-- <ng-template let-message="myMessage" #myTemplateRef>
 {{message}}
 </ng-template>
 
@@ -31,8 +31,21 @@ Content displayed if expression returns true
 
 <app-heading [title]="theTruth"> </app-heading>
 <ng-template #theTruth>
-    <h4>hello world</h4>
-   </ng-template>
+  <h4>hello world</h4>
+</ng-template>
 
 
 
+
+
+<h4>objects multiple key usage</h4>
+
+<ng-template #myTemplate let-foo="bar">
+  <span>demoval
+    {{ foo.demoval}}
+  </span>
+</ng-template>
+
+<ng-template [ngTemplateOutlet]="myTemplate" [ngTemplateOutletContext]="{
+										                                           bar:test.test1.test2.test3.test4
+										                                        }"></ng-template>
