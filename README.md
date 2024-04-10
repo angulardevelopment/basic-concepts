@@ -1,9 +1,9 @@
-## App name
-basic concepts like
+## basic concepts coverage
+
 Interpolation
 attr-binding
 class-binding
-container-demo
+ng-container
 directives
 event-binding
 pipe-demo
@@ -12,6 +12,9 @@ style-binding
 template-tag
 templated-reference
 Two way-binding
+zone
+webworker
+
 
 ng g c templated-reference/test --skip-import
 
