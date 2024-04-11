@@ -12,7 +12,8 @@ export class StyleBindingComponent implements OnInit {
   employeeList = [{ name: 'smith', country: 'UK' }, { name: 'Meyers', country: 'USA' }];
   fontSizePx = 16;
   PrintButton = true
-
+  flag;
+  randomcolor = "#4bacc6";
 
   constructor() { }
 
@@ -28,7 +29,7 @@ export class StyleBindingComponent implements OnInit {
     }
   }
 
-  randomcolor = "#4bacc6";
+
 
   getRandomColor() {
     let letters = "0123456789ABCDEF".split("");

@@ -19,12 +19,18 @@
 <h4 [ngStyle]="{'background-color':PrintButton=== false ? '#285574' : 'grey' }">Print Report</h4>
 <div [ngStyle]="{'background-image':' url(' + 'https://i.picsum.photos/id/556/200/300.jpg?hmac=TLwE28gIMuw2BUTndMuC3hoTlK6FtrE6Mx1UnR2dzu8' + ')'}" class="test">div element</div>
 
-<ul *ngFor= " let employee of employeeList">
+<ul *ngFor="let employee of employeeList">
 <li [ngStyle]="{'color': getColor(employee.country)}">
     {{employee.name}} ({{employee.country}})
 </li>
 </ul>
 
+<div
+  [attr.style]="
+    flag ? 'background-color:red !important' : 'background-color:blue'
+  "
+></div>
 
+<div [style.background-image]="'url(../../assets/img/' + 'i.img' + ')'"></div>
 
 
