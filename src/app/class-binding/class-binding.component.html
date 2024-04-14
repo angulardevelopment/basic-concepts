@@ -1,63 +1,71 @@
-<p [class]="classExpression">Basic Test classExpression</p>
-<hr />
-<!-- [class]=”my-class-1 my-class-2 my-class-3“. -->
-<p [class.sale]="onSale">Test sale</p>
-toggle the "special" class on/off with a property
-<div [class.special]="isSpecial">The class binding is special</div>
-<hr />
+<div *ngIf="false">
+  <p [class]="classExpression">Basic Test classExpression</p>
+  <hr />
+  <!-- [class]=”my-class-1 my-class-2 my-class-3“. -->
+  <p [class.sale]="onSale">Test sale</p>
+  toggle the "special" class on/off with a property
+  <div [class.special]="isSpecial">The class binding is special</div>
+  <hr />
 
-<p [class]="{ foo: true, bar: false }">Test object class</p>
-<hr />
-
-
-<div class="bad curly special"> standard class attribute setting </div>
+  <p [class]="{ foo: true, bar: false }">Test object class</p>
+  <hr />
 
 
-<div [class]="badCurly" class="bad curly class">
-  standard class and class binding - reset/override all class names with a binding 
+  <div class="bad curly special"> standard class attribute setting </div>
+
+
+  <div [class]="badCurly" class="bad curly class">
+    standard class and class binding - reset/override all class names with a binding
+  </div>
+
+
+  <div class="special2" [class.special]="!isSpecial2">
+    This one is not so special - binding to `class.special` trumps the class attribute
+  </div>
+  <hr />
+
+  <p [class.my-class]="step=='step1'">Test sale</p>
+
+
+  <div bind-class.special="isSpecial">This class binding is special too</div>
+  <hr>
+
+  <div [ngClass]="{ 'my-class': stepCond == 'step1' }">With one condition</div>
+
+  <div [ngClass]="{ 'my-class': step == 'step1', 'my-class2': step == 'step2' }">
+    with multiple conditions
+  </div>
+
+  <div [ngClass]="step == 'step1' ? 'my-class1' : 'my-class2'">
+    with ternary operator
+  </div>
+
+  <div [ngClass]="isSpecial ? 'special' : ''">This div is special</div>
+
+  <div [ngClass]="{ bad: true, curly: false, special: true }">Curly special</div>
+
+  <div [ngClass]="{ '1': 'my-class1', '2': 'my-class2', '3': 'my-class4' }[step]">
+    Dynamic step counter
+  </div>
+
+  <hr>
+
+  <div [ngClass]="currentClasses">
+    initially this div has no class
+
+    This div after calling setCurrentClasses it adds saveable, unchanged, and special classes
+  </div>
+  <button (click)="setCurrentClasses()">Refresh currentClasses</button>
 </div>
 
- 
-<div class="special2" [class.special]="!isSpecial2">
-  This one is not so special - binding to `class.special` trumps the class attribute 
+<div *ngFor="let id of ids">
+  Id is {{id}}
+  <div *ngIf="id %2 == 0">
+<div [ngClass]="'even'">Even Number</div>
+  </div>
+  <div>
+    <div *ngIf="id %2 == 1">
+      <div [ngClass]="'odd'">odd Number</div>
+        </div>
+  </div>
 </div>
-<hr />
-
-<p [class.my-class]="step=='step1'">Test sale</p>
-
- 
-<div bind-class.special="isSpecial">This class binding is special too</div>
-<hr>
-
-<div [ngClass]="{ 'my-class': stepCond == 'step1' }">With one condition</div>
-
-<div [ngClass]="{ 'my-class': step == 'step1', 'my-class2': step == 'step2' }">
-with multiple conditions
-</div>
-
-<div [ngClass]="step == 'step1' ? 'my-class1' : 'my-class2'">
-  with ternary operator
-</div>
-
-<div [ngClass]="isSpecial ? 'special' : ''">This div is special</div>
-
-<div [ngClass]="{ bad: true, curly: false, special: true }">Curly special</div>
-
-<div [ngClass]="{ '1': 'my-class1', '2': 'my-class2', '3': 'my-class4' }[step]">
-  Dynamic step counter
-</div>
-
-<hr>
-
-<div [ngClass]="currentClasses">
-  initially this div has no class
-
-  This div after calling setCurrentClasses it adds saveable, unchanged, and special classes
-</div>
-<button (click)="setCurrentClasses()">Refresh currentClasses</button>
-
-
-
-
-
-

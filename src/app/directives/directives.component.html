@@ -1,1 +1,9 @@
 <p ngNonBindable>This should not evaluate: {{ 1 + 1 }}</p>
+
+<p [appHighlightDynamic]="'red'" defaultColor="yellow">Style me with a better directive!</p>
+
+<p *appHideshow="'red2'">hide/show</p>
+
+<button counting>Increment</button>
+
+<p [appHighlight] [defaultColor]>normal</p>

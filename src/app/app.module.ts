@@ -24,6 +24,14 @@ import { HeadingComponent } from './template-tag/heading/heading.component';
 import { SizerComponent } from './twoway-binding/sizer/sizer.component';
 import { WebwokerDemoComponent } from './webwoker-demo/webwoker-demo.component';
 import { AngularzoneComponent } from './angularzone/angularzone.component';
+import { ButtonComponent } from './button/button.component';
+import { ButtonDirective } from './button/button.directive';
+import { CountDirective } from './directives/count.directive';
+import { HighlightDirective } from './directives/highlight.directive';
+import { HighlightDynamicDirective } from './directives/highlight-dynamic.directive';
+import { HideshowDirective } from './directives/hideshow.directive';
+import { SpecialComponent } from './button/special/special.component';
+import { MyPipe } from './button/my.pipe';
 
 @NgModule({
   declarations: [
@@ -46,10 +54,12 @@ import { AngularzoneComponent } from './angularzone/angularzone.component';
     HeadingComponent,
     SizerComponent,
     WebwokerDemoComponent,
-    AngularzoneComponent
+    AngularzoneComponent,
+    ButtonComponent,
+    ButtonDirective,
+    HideshowDirective, HighlightDirective, HighlightDynamicDirective, CountDirective, SpecialComponent, MyPipe
   ],
   imports: [
-    // BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserModule,
 
     AppRoutingModule,
