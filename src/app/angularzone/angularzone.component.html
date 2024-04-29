@@ -5,3 +5,41 @@
 
 <button (click)="processWithinAngularZone()">Process within Angular zone</button>
 <button (click)="processOutsideOfAngularZone()">Process outside of Angular zone</button>
+
+
+<p>Start editing to see some magic happen :)</p>
+
+<!-- (mousemove)="mouseMove($event)"  -->
+<div (mousedown)="mouseDown($event)" (mouseup)="mouseUp($event)" class="test">
+  <!-- <svg:g box *ngFor="let box of boxes" [box]="box">
+      </svg:g> -->
+</div>
+
+<div class="container mt-3">
+  <h2>Click handler in NgZone</h2>
+  <button class="btn btn-primary" (click)="onClick()">Click me!</button>
+  <hr />
+
+  <h2>Click handler outside NgZone</h2>
+  <button #btn class="btn btn-primary">Click me!</button>
+  <hr />
+
+  <h2>Click handler outside NgZone</h2>
+  <button class="btn btn-primary" (click.zoneless)="onClick()">
+    Click me!
+  </button>
+
+  <hr />
+  <h2>3rd party lib initialized outside NgZone</h2>
+  <button appTooltip class="btn btn-danger">Hover me!</button>
+</div>
+
+<button (click)="onClick()">Click me</button>
+<div>{{ message }}</div>
+
+
+    <button (click)="handleClick()">Click Me</button>
+
+
+     <button (click)="runInZone()">Run In Zone</button>
+<button (click)="runOutsideZone()">Run Outside Zone</button>
