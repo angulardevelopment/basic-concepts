@@ -33,6 +33,7 @@ import { HideshowDirective } from './directives/hideshow.directive';
 import { SpecialComponent } from './button/special/special.component';
 import { MyPipe } from './button/my.pipe';
 import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.component';
+import { ViewchildrenComponent } from './viewchildren/viewchildren.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,9 @@ import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.compo
     AngularzoneComponent,
     ButtonComponent,
     ButtonDirective,
-    HideshowDirective, HighlightDirective, HighlightDynamicDirective, CountDirective, SpecialComponent, MyPipe, LifecycleHooksComponent
+    HideshowDirective, HighlightDirective, HighlightDynamicDirective, 
+    CountDirective, SpecialComponent, MyPipe, LifecycleHooksComponent,
+    ViewchildrenComponent
   ],
   imports: [
     BrowserModule,

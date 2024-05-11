@@ -16,7 +16,8 @@ export class ContainerDemoComponent {
 
   @ViewChild("vc", { read: ViewContainerRef }) vc: ViewContainerRef;
   @ViewChild("tpl", { read: TemplateRef }) tpl: TemplateRef<any>;
-  
+  //static - True is when the view is initialized (before the first change detection) for the first time. False if you want it to be resolved after every change detection
+
   comps = [ClassBindingComponent];
   
   ngAfterViewInit() {
