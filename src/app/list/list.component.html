@@ -1,0 +1,53 @@
+<ul (click)="getText($event);">
+  <li>demo1</li>
+  <li>demo2</li>
+  <li>demo3</li>
+  <li>demo4</li>
+  </ul>
+  
+  
+  <ul class="nav" (click)="highLightElement()">
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+  <li>Four</li>
+  </ul>
+  
+  
+  <button class="class1" (click)="clicked($event)">Click me</button>
+  
+  <ul>
+  <li *ngFor="let d of data">
+  <span>{{d.id}}</span> {{d.name}}
+  </li>
+  </ul>
+  
+  <ul>
+  <li *ngFor="let element of arrData; let i = index">
+  {{i}}. {{element.id}}
+  </li>
+  </ul>
+  
+  <ul>
+  <li *ngFor="let element of array; trackBy: trackElement"></li>
+  </ul>
+  
+  <ul *ngFor="let room of array; let i = index">
+  <li>
+  {{room.key2}} : {{room.key12}}
+  </li>
+  
+  
+  <ul *ngFor="let room of array2; let i = index">
+  <li *ngFor="let details of getIterableData(room, i)">
+  {{details.key}} : {{details.data}}
+  </li>
+  </ul>
+  
+  
+  <p>Improve Performance with trackBy</p>
+  <ul>
+        <li *ngFor="let item of collection;trackBy: trackByFn">{{item.id}}</li>
+      </ul>
+      <button (click)="getItems()">Refresh items</button>
+  

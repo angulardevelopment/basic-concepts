@@ -34,6 +34,9 @@ import { SpecialComponent } from './button/special/special.component';
 import { MyPipe } from './button/my.pipe';
 import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.component';
 import { ViewchildrenComponent } from './viewchildren/viewchildren.component';
+import { ChangeDetectionComponent } from './change-detection/change-detection.component';
+import { TestComponent1 } from './test/test.component';
+import { ListComponent } from './list/list.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +64,10 @@ import { ViewchildrenComponent } from './viewchildren/viewchildren.component';
     ButtonDirective,
     HideshowDirective, HighlightDirective, HighlightDynamicDirective, 
     CountDirective, SpecialComponent, MyPipe, LifecycleHooksComponent,
-    ViewchildrenComponent
+    ViewchildrenComponent,
+    ChangeDetectionComponent,
+    TestComponent1,
+    ListComponent
   ],
   imports: [
     BrowserModule,
