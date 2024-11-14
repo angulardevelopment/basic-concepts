@@ -1,5 +1,6 @@
 import {
   ChangeDetectionStrategy,
+  ChangeDetectorRef,
   Component,
   Input,
   OnInit,
@@ -14,7 +15,9 @@ import {
 export class TestComponent1 implements OnInit {
   @Input() person;
 
-  constructor() {}
+  constructor(private cdRef: ChangeDetectorRef) {
+    cdRef.detach();
+    }
 
   ngOnInit() {}
 }

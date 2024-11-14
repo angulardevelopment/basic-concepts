@@ -71,3 +71,21 @@ export class PipeDemoComponent implements OnInit {
 }
 
 
+
+var s=10;
+
+exampleOfPureFunc=(a,b)=>{
+
+return a+b;
+
+}
+
+exampleOfPureFunc(10,5);
+
+exampleOfImpureFunc = (a, b) => {
+
+s = s + a + b;
+
+return s;
+
+}

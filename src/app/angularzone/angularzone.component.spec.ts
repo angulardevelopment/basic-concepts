@@ -22,4 +22,13 @@ describe('AngularzoneComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should redirect if condition true', fakeAsync(() => {
+    router.navigate(['']);
+    fixture.ngZone.run(() => {
+    component.redirectIfConditionTrue();
+    });
+    tick();
+    expect(location.path()).toBe('/AgentLeadsManager');
+    }));
 });
