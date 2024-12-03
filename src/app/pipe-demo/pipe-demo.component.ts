@@ -54,13 +54,13 @@ export class PipeDemoComponent implements OnInit {
   addImpure = (() => {
 
     let state = 0;
-    
+
     return (v) => {
-    
+
     return state += v;
-    
+
     }
-    
+
     })();
 
     test(){
@@ -72,20 +72,20 @@ export class PipeDemoComponent implements OnInit {
 
 
 
-var s=10;
+// var s=10;
 
-exampleOfPureFunc=(a,b)=>{
+// exampleOfPureFunc=(a,b)=>{
 
-return a+b;
+// return a+b;
 
-}
+// }
 
-exampleOfPureFunc(10,5);
+// exampleOfPureFunc(10,5);
 
-exampleOfImpureFunc = (a, b) => {
+// exampleOfImpureFunc = (a, b) => {
 
-s = s + a + b;
+// s = s + a + b;
 
-return s;
+// return s;
 
-}
+// }
