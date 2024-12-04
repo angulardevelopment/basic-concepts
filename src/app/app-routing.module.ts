@@ -5,9 +5,10 @@ import { InterpolationComponent } from './interpolation/interpolation.component'
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { AttrBindingComponent } from './attr-binding/attr-binding.component';
 import { ClassBindingComponent } from './class-binding/class-binding.component';
+import { StyleBindingComponent } from './style-binding/style-binding.component';
 
 const routes: Routes = [{
-  path:'detection',
+  path:'ChangeDetectionComponent',
   component: ChangeDetectionComponent
 },
 {
@@ -25,6 +26,9 @@ const routes: Routes = [{
 {
   path:'ClassBindingComponent',
   component: ClassBindingComponent
+}, {
+  path:'StyleBindingComponent',
+  component: StyleBindingComponent
 }];
 
 @NgModule({

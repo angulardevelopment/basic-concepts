@@ -26,3 +26,11 @@
 
 <p   id={{item.id}}></p>
 
+<p> BeverageInput: {{beverageInputValue}} </p>
+
+    <select #beverageInput (change)="getBeverageInput(beverageInput.value)">
+      <option value="milo">Milo</option>
+      <option value="coke">Coke</option>
+      <option value="fanta">Fanta</option>
+    </select>
+

@@ -10,7 +10,7 @@ export class StyleBindingComponent implements OnInit {
   isSpecial = true;
   canSave = true;
   employeeList = [{ name: 'smith', country: 'UK' }, { name: 'Meyers', country: 'USA' }];
-  fontSizePx = 16;
+  fontSizePx = 40;
   PrintButton = true
   flag;
   randomcolor = "#4bacc6";

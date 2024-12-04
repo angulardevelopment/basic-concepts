@@ -26,13 +26,17 @@ export class InterpolationComponent implements OnInit {
 
   getData(){
     console.log('test');
-    
+
   }
   getVal(): number { return 6; }
 
   changeTitle(text){
     console.log(text, 'text');
-    
+
+  }
+  beverageInputValue = '';
+  getBeverageInput(value){
+this.beverageInputValue = value;
   }
 
 }
