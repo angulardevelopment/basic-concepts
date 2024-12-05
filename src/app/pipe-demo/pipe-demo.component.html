@@ -33,7 +33,7 @@
 
 <div>Birthdate: {{(currentHero?.birthdate | date:'longDate') | uppercase}}</div>
 
-<div id="json">{{currentHero | json}}</div>
+<div id="json">json pipe {{currentHero | json}}</div>
 
 
 <ul>
@@ -53,12 +53,12 @@
 <p> {{'hello mY friend' | titlecase}}</p>
 
 
+<div>
+  <p>Impure pipe</p>
   <h2 *ngIf="!countCompleted">{{ count$ | async }}</h2>
-
   <h2 *ngIf="countCompleted">{{ message }}</h2>
-
+</div>
   <div>
-    custom pipe
+    exponential Strength custom pipe
     {{ 2 | exponentialStrength:10 }}
   </div>
-  

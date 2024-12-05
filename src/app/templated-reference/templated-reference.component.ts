@@ -18,15 +18,17 @@ export class TemplatedReferenceComponent implements OnInit {
   ngOnInit(): void {
     // const divEl: HTMLDivElement = this.myTestDiv.nativeElement;
 
+
   }
 
   ngAfterViewInit(): void {
     // We can access the TestComponent now that this portion of the view tree has been initiated.
     // this.myTestComp.saveTheWorld();
+    console.log(this.myTestDiv.nativeElement, 'nativeElement')
 }
 
   callValue(str){
-    alert(str);
+    console.log(str);
   }
 
   onSubmit(contactForm){

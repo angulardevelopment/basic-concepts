@@ -1,17 +1,18 @@
-<!-- <div>
+<div>
   User Name: <input type="text" [(ngModel)]="userName"> <span>{{userName}}</span>
 </div>
 <br>
 <div>
-  <input [ngModel]="currentHero.name" (ngModelChange)="currentHero.name=$event">
-  <input [ngModel]="currentHero.name">
+  <input [ngModel]="currentHero.name" (ngModelChange)="currentHero.name=$event" placeholder="model change">
+
+  <input [ngModel]="currentHero.name" placeholder="hero">
 </div>
 <br>
-<input [ngModel]="currentSpec" (ngModelChange)="setUppercaseName($event)">
-<input [ngModel]="currentSpec"> -->
+<input [ngModel]="currentSpec" (ngModelChange)="setUppercaseName($event)" placeholder="spec modal change">
+<input [ngModel]="currentSpec" placeholder="updated change">
 
-<app-sizer [(size)]="fontSizePx"></app-sizer>
+<!-- <app-sizer [(size)]="fontSizePx"></app-sizer>
 
 <div [style.font-size.px]="fontSizePx">Resizable Text</div>
 
-<app-sizer [size]="fontSizePx" (sizeChange)="fontSizePx=$event"></app-sizer>
+<app-sizer [size]="fontSizePx" (sizeChange)="fontSizePx=$event"></app-sizer> -->

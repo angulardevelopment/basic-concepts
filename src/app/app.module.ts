@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InterpolationComponent } from './interpolation/interpolation.component';
@@ -14,7 +13,6 @@ import { DirectivesComponent } from './directives/directives.component';
 import { TemplatedReferenceComponent } from './templated-reference/templated-reference.component';
 import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
 import { TemplateDemoComponent } from './template-tag/template-tag.component';
-
 import { ContainerDemoComponent } from './container-demo/container-demo.component';
 import { FormsModule } from '@angular/forms';
 import { ExponentialStrengthPipe } from './pipe-demo/exponential-strength.pipe';
@@ -62,7 +60,7 @@ import { ListComponent } from './list/list.component';
     AngularzoneComponent,
     ButtonComponent,
     ButtonDirective,
-    HideshowDirective, HighlightDirective, HighlightDynamicDirective, 
+    HideshowDirective, HighlightDirective, HighlightDynamicDirective,
     CountDirective, SpecialComponent, MyPipe, LifecycleHooksComponent,
     ViewchildrenComponent,
     ChangeDetectionComponent,
@@ -71,7 +69,6 @@ import { ListComponent } from './list/list.component';
   ],
   imports: [
     BrowserModule,
-
     AppRoutingModule,
     FormsModule,
   ],

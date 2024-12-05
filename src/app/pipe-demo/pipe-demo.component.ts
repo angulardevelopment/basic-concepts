@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, interval } from "rxjs";
-
 import { map, takeWhile, finalize } from "rxjs/operators";
 
 @Component({
@@ -31,7 +30,7 @@ export class PipeDemoComponent implements OnInit {
 
   count$: Observable<number>;
 
-  message = "Happy Birthday!";
+  message = "Happy bday!";
 
   ngOnInit() {
 

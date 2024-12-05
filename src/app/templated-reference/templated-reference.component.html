@@ -16,18 +16,18 @@
 You have selected {{customerList.selectedCustomer?.name}}
 <app-test #customerList="customerList"></app-test>
 
-<app-test #mytestcomp=""></app-test>
-
+<app-test #mytestcomp></app-test>
+<button (click)="mytestcomp.saveTheWorld()">check </button>
 <p>
  <label for="firstName">First Name</label>
  <input (keyup)="0" type="text" #firstName id="firstName">
 </p>
- 
+
 <p>
  <label for="lastName">Last Name</label>
  <input (keyup)="0" type="text" #lastName id="lastName">
 </p>
- 
+
 <b>Welcome {{firstName.value}} {{lastName.value}} </b>
 
 <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
@@ -44,7 +44,7 @@ You have selected {{customerList.selectedCustomer?.name}}
   <form>
     <div class="form-group">
      <label for="exampleInputEmail1">User name</label>
-     <input class="form-control" [(ngModel)]="user.name" name="name" required 
+     <input class="form-control" [(ngModel)]="user.name" name="name" required
        minlength="4" #nameCtrl="ngModel">
      </div>
      <div *ngIf="nameCtrl.touched" class="invalid-feedback">
@@ -55,29 +55,29 @@ You have selected {{customerList.selectedCustomer?.name}}
         Please enter name with minimum 4 character
        </p>
      </div>
- 
+
      <div class="form-group">
        <label for="exampleInputEmail1">User email</label>
-       <input class="form-control" type="email" [(ngModel)]="user.email"     
-        name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required 
+       <input class="form-control" type="email" [(ngModel)]="user.email"
+        name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required
         #emailCtrl="ngModel">
      </div>
      <div *ngIf="emailCtrl.touched" class="invalid-feedback">
        <p *ngIf="emailCtrl.errors?.required">Email is a required field!</p>
        <p *ngIf="emailCtrl.errors?.pattern">This is not a valid Email!!!</p>
      </div>
- 
+
      <div class="form-group">
        <label for="exampleInputPassword1">User Age</label>
-       <input class="form-control" [(ngModel)]="user.age" name="age" type="number" 
+       <input class="form-control" [(ngModel)]="user.age" name="age" type="number"
        #ageCtrl="ngModel" required>
      </div>
- 
-     <div class="invalid-feedback" *ngIf="ageCtrl.errors?.required && 
+
+     <div class="invalid-feedback" *ngIf="ageCtrl.errors?.required &&
        ageCtrl.touched">
        Age is required
      </div>
- 
+
      <button (click)="setUserData()" class="btn btn-primary">
        Set data from Model to View
      </button>
