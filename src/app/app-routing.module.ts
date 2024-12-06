@@ -9,6 +9,7 @@ import { StyleBindingComponent } from './style-binding/style-binding.component';
 import { TwowayBindingComponent } from './twoway-binding/twoway-binding.component';
 import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
 import { TemplatedReferenceComponent } from './templated-reference/templated-reference.component';
+import { TemplateDemoComponent } from './template-tag/template-tag.component';
 
 const routes: Routes = [{
   path:'ChangeDetectionComponent',
@@ -44,6 +45,10 @@ const routes: Routes = [{
 {
   path:'TemplatedReferenceComponent',
   component: TemplatedReferenceComponent
+},
+{
+  path:'TemplateDemoComponent',
+  component: TemplateDemoComponent
 }];
 
 @NgModule({
