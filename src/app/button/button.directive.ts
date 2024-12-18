@@ -1,10 +1,11 @@
 import { Directive, ElementRef, HostBinding, Input } from '@angular/core';
 
 @Directive({
-  selector: 'app-button[color]'
+  selector: 'app-button[color]',
+  standalone: false
 })
 export class ButtonDirective {
-  // @HostBinding('style.backgroundColor') 
+  // @HostBinding('style.backgroundColor')
   @Input() color? = 'pink'
 
   constructor(public elementRef:ElementRef) { }
@@ -16,7 +17,7 @@ export class ButtonDirective {
 
 
 
-   
+
 
 
 }

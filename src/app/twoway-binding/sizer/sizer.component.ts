@@ -3,7 +3,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 @Component({
   selector: 'app-sizer',
   templateUrl: './sizer.component.html',
-  styleUrls: ['./sizer.component.scss']
+  styleUrls: ['./sizer.component.scss'],
+  standalone: false
 })
 export class SizerComponent  {
   @Input() size!: number | string;

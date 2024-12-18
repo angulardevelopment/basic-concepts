@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-class-binding',
   templateUrl: './class-binding.component.html',
-  styleUrls: ['./class-binding.component.scss']
+  styleUrls: ['./class-binding.component.scss'],
+  standalone: false
 })
 export class ClassBindingComponent implements OnInit {
   stepCond = 'step1';

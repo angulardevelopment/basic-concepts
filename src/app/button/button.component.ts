@@ -11,7 +11,8 @@ import { EmployeeService } from './employee.service';
         provide: ListService,
         useClass: EmployeeService
     }
-]
+],
+standalone: false
 })
 export class ButtonComponent implements OnInit {
   // @Input() color = '#cecece'

@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-interpolation',
   templateUrl: './interpolation.component.html',
-  styleUrls: ['./interpolation.component.scss']
+  styleUrls: ['./interpolation.component.scss'],
+  standalone: false
 })
 export class InterpolationComponent implements OnInit {
   item = {id:1};

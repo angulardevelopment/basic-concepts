@@ -12,6 +12,7 @@ declare let Zone: any;
   selector: 'app-angularzone',
   templateUrl: './angularzone.component.html',
   styleUrls: ['./angularzone.component.scss'],
+  standalone: false
 })
 export class AngularzoneComponent {
   progress: number = 0;

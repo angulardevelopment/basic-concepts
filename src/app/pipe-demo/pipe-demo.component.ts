@@ -5,7 +5,8 @@ import { map, takeWhile, finalize } from "rxjs/operators";
 @Component({
   selector: 'app-pipe-demo',
   templateUrl: './pipe-demo.component.html',
-  styleUrls: ['./pipe-demo.component.scss']
+  styleUrls: ['./pipe-demo.component.scss'],
+  standalone: false
 })
 export class PipeDemoComponent implements OnInit {
   amount = '5';

@@ -6,7 +6,8 @@ import { ClassBindingComponent } from "../class-binding/class-binding.component"
 @Component({
   selector: 'app-container-demo',
   templateUrl: './container-demo.component.html',
-  styleUrls: ['./container-demo.component.scss']
+  styleUrls: ['./container-demo.component.scss'],
+  standalone: false
 })
 export class ContainerDemoComponent {
   lessons = [{'sub':'eng'}];
@@ -19,7 +20,7 @@ export class ContainerDemoComponent {
   //static - True is when the view is initialized (before the first change detection) for the first time. False if you want it to be resolved after every change detection
 
   comps = [ClassBindingComponent];
-  
+
   ngAfterViewInit() {
     let view = this.tpl.createEmbeddedView(null);
     this.vc.insert(view);

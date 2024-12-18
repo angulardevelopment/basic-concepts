@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-style-binding',
   templateUrl: './style-binding.component.html',
-  styleUrls: ['./style-binding.component.scss']
+  styleUrls: ['./style-binding.component.scss'],
+  standalone: false
 })
 export class StyleBindingComponent implements OnInit {
   expression = true;

@@ -2,6 +2,7 @@ import { Directive, HostBinding, HostListener, Input } from '@angular/core';
 
 @Directive({
   selector: '[appHighlight]',
+  standalone: false
 })
 export class HighlightDirective {
   @Input() defaultColor: string = 'yellow';

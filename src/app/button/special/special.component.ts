@@ -4,7 +4,8 @@ import { ButtonComponent } from '../button.component';
 @Component({
   selector: 'app-special',
   templateUrl: './special.component.html',
-  styleUrls: ['./special.component.scss']
+  styleUrls: ['./special.component.scss'],
+  standalone: false
 })
 export class SpecialComponent extends ButtonComponent implements OnInit {
 

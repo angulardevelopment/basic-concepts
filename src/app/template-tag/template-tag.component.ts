@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-template-demo',
   templateUrl: './template-tag.component.html',
-  styleUrls: ['./template-demo.component.scss']
+  styleUrls: ['./template-demo.component.scss'],
+  standalone: false
 })
 export class TemplateDemoComponent implements OnInit {
   serverCreated = false;

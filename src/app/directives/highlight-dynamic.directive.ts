@@ -2,6 +2,7 @@ import { Directive, HostBinding, HostListener, Input } from '@angular/core';
 
 @Directive({
   selector: '[appHighlightDynamic]',
+  standalone: false
 })
 export class HighlightDynamicDirective {
   @Input() defaultColor: string;

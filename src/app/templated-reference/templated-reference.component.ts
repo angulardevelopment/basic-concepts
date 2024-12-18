@@ -5,6 +5,7 @@ import { TestComponent } from './test/test.component';
   selector: 'app-templated-reference',
   templateUrl: './templated-reference.component.html',
   styleUrls: ['./templated-reference.component.scss'],
+  standalone: false
 
 })
 export class TemplatedReferenceComponent implements OnInit {

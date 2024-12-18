@@ -11,7 +11,7 @@ import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
 import { TemplatedReferenceComponent } from './templated-reference/templated-reference.component';
 import { TemplateDemoComponent } from './template-tag/template-tag.component';
 
-const routes: Routes = [{
+export const routes: Routes = [{
   path:'ChangeDetectionComponent',
   component: ChangeDetectionComponent
 },

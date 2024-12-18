@@ -2,7 +2,8 @@ import { Pipe, PipeTransform } from "@angular/core";
 
 @Pipe({
 
-name: "sort"
+name: "sort",
+standalone: false
 
 })
 

@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InterpolationComponent } from './interpolation/interpolation.component';
@@ -38,10 +38,10 @@ import { ListComponent } from './list/list.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    // AppComponent,
     InterpolationComponent,
     PropertyBindingComponent,
-    AttrBindingComponent,
+    // AttrBindingComponent,
     ClassBindingComponent,
     StyleBindingComponent,
     EventBindingComponent,
@@ -73,6 +73,7 @@ import { ListComponent } from './list/list.component';
     FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  // bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

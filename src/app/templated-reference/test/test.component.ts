@@ -4,7 +4,8 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-test',
   templateUrl: './test.component.html',
   styleUrls: ['./test.component.scss'],
-  exportAs:'customerList'
+  exportAs:'customerList',
+  standalone: false
 })
 export class TestComponent implements OnInit {
 

@@ -3,7 +3,8 @@ import { Component, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'app-heading',
   templateUrl: './heading.component.html',
-  styleUrls: ['./heading.component.scss']
+  styleUrls: ['./heading.component.scss'],
+  standalone: false
 })
 export class HeadingComponent implements OnInit {
   // theTruth = 'test';
@@ -12,7 +13,7 @@ export class HeadingComponent implements OnInit {
 
   ngOnInit(): void {
     console.log(this.title, 'test1');
-    
+
   }
 
 }

@@ -1,19 +1,20 @@
 import { Directive, HostListener, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 
 @Directive({
-  selector: '[appHideshow]'
+  selector: '[appHideshow]',
+  standalone: false
 })
 export class HideshowDirective {
 
 
-  @Input('appHideshow') highlightColor: string; 
+  @Input('appHideshow') highlightColor: string;
 
   constructor(
     private templateRef: TemplateRef<any>,
     private viewContainer: ViewContainerRef
   ) {
 
-  
+
   }
 
   ngOnInit() {

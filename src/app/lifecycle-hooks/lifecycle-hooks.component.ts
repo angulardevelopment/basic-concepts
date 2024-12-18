@@ -3,7 +3,8 @@ import { ChangeDetectorRef, Component, ElementRef, OnInit, SimpleChanges, ViewCh
 @Component({
   selector: 'app-lifecycle-hooks',
   templateUrl: './lifecycle-hooks.component.html',
-  styleUrls: ['./lifecycle-hooks.component.scss']
+  styleUrls: ['./lifecycle-hooks.component.scss'],
+  standalone: false
 })
 export class LifecycleHooksComponent implements OnInit {
 

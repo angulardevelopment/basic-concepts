@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-webwoker-demo',
   templateUrl: './webwoker-demo.component.html',
-  styleUrls: ['./webwoker-demo.component.scss']
+  styleUrls: ['./webwoker-demo.component.scss'],
+  standalone: false
 })
 export class WebwokerDemoComponent {
 

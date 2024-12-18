@@ -2,6 +2,7 @@ import { Directive, HostListener } from '@angular/core';
 
 @Directive({
   selector: 'button[counting]',
+  standalone: false
 })
 export class CountDirective {
   constructor() {}
