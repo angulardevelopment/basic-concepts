@@ -12,6 +12,13 @@ export class WebwokerDemoComponent {
   factorialInput: number = 1;
 
   constructor() {
+    this.worker = new SharedWorker(new URL('./worker.ts', import.meta.url).href);
+    
+    this.worker.port.onmessage = (event) => {
+      console.log('Message from worker:', event.data);
+    };
+    // the `start()` method is called on the `worker.port` to initialize communication with the worker.
+    this.worker.port.start(); // Start the SharedWorker
     this.calculateFactorial();
   }
 
@@ -27,6 +34,15 @@ export class WebwokerDemoComponent {
       // Web Workers are not supported in this environment.
       // You should add a fallback so that your program still executes correctly.
     }
+  }
+  // e worker is ready to communicate, allowing you to send and receive messages effectively.
+  private worker: SharedWorker;
+
+
+
+  sendMessage() {
+    // You can send messages to the worker using `postMessage()`:
+    this.worker.port.postMessage('Hello, worker!');
   }
 
 }
