@@ -1,10 +1,11 @@
-<div>   {{ amount | currency:'EUR' }} </div>
-<p>{{ 1234.56 | currency:"GBP" }}</p>
+<div>  EUR amount {{ amount | currency:'EUR' }} </div>
+<p>Pound amount GBP {{ 1234.56 | currency:"GBP" }}</p>
 <div>
   <!-- pipe price to USD and display the $ symbol -->
-  <label>Price: </label>{{product.price | currency:'USD':'symbol'}}
+  <label>Price USD: </label>{{product.price | currency:'USD':'symbol'}}
 </div>
 
+slice
 <div>
   {{ arr | slice:1:5 }}
 </div>
@@ -13,29 +14,29 @@
 </ul>
 
 <div>Title through upperCase pipe: {{title | uppercase}}</div>
-<h2>{{title | lowercase}}</h2>
+<p>lowercase{{title | lowercase}}</p>
 
 <!-- Pipe chaining: convert title to uppercase, then to lowercase -->
 <div>
-  Title through a pipe chain:
+  Title through a pipe chain uppercase, then lowercase:
   {{title | uppercase | lowercase}}
 </div>
 
 <p>The hero's birthday is {{ birthday | date }}</p>
 <!-- pipe with configuration argument => "February 25, 1970" -->
-<div>Birthdate: {{currentHero?.birthdate | date:'longDate'}}</div>
+<div>Birthdate (longDate): {{currentHero?.birthdate | date:'longDate'}}</div>
 
-<h2>{{currentHero?.birthdate | date:'shortDate'}}</h2>
-<h2>{{currentHero?.birthdate | date:'fullDate'}}</h2>
+<p>shortDate{{currentHero?.birthdate | date:'shortDate'}}</p>
+<h2>fullDate{{currentHero?.birthdate | date:'fullDate'}}</h2>
 
-<h2>{{currentHero?.birthdate | date:'fullDate' | uppercase}}</h2>
-<p>{{ currentHero?.birthdate | date: 'd/M/y' }}</p>
+<h2>fullDate{{currentHero?.birthdate | date:'fullDate' | uppercase}}</h2>
+<p>d/M/y format {{ currentHero?.birthdate | date: 'd/M/y' }}</p>
 
-<div>Birthdate: {{(currentHero?.birthdate | date:'longDate') | uppercase}}</div>
+<div>Birthdate(longDate): {{(currentHero?.birthdate | date:'longDate') | uppercase}}</div>
 
 <div id="json">json pipe {{currentHero | json}}</div>
 
-
+keyvalue pipe
 <ul>
   <li *ngFor="let word of words; keyvalue">
 
@@ -45,9 +46,9 @@
 
 </ul>
 
-<p ngNonBindable>{{ 3.14159265 | number: '3.1-2' }}</p>
+<p ngNonBindable>NonBindable{{ 3.14159265 | number: '3.1-2' }}</p>
 
-<p>{{ 3.14159265 | number: '3.1-2' }}</p>
+<p>3.1-2 number pipe {{ 3.14159265 | number: '3.1-2' }}</p>
 
 <p>{{arr | sort: "descending"}}</p>
 <p> {{'hello mY friend' | titlecase}}</p>
@@ -63,5 +64,6 @@
     {{ 2 | exponentialStrength:10 }}
   </div>
 
-  JavaScript is considering a built-in pipeline operator 
-  {{data |> json}}
+  <p>
+  JavaScript is considering a built-in pipeline operator. The pipeline operator (|>) is not yet a part of JavaScript/TypeScript or Angular templates, so you should avoid using it for now in Angular templates.
+</p>

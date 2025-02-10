@@ -10,6 +10,7 @@ import { TwowayBindingComponent } from './twoway-binding/twoway-binding.componen
 import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
 import { TemplatedReferenceComponent } from './templated-reference/templated-reference.component';
 import { TemplateDemoComponent } from './template-tag/template-tag.component';
+import { NewsComponent } from './news/news.component';
 
 export const routes: Routes = [{
   path:'ChangeDetectionComponent',
@@ -49,6 +50,10 @@ export const routes: Routes = [{
 {
   path:'TemplateDemoComponent',
   component: TemplateDemoComponent
+},
+{
+  path:'NewsComponent',
+  component: NewsComponent
 }];
 
 @NgModule({
@@ -58,6 +63,6 @@ export const routes: Routes = [{
 //     initialNavigation: 'enabled'
 // }
 )],
-  exports: [RouterModule]
+  // exports: [RouterModule]
 })
 export class AppRoutingModule { }

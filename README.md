@@ -36,6 +36,15 @@ Implemented basic features of Angular like-
 - zone
 - web worker
 
+Building web component
+$ ng build --prod --output-hashing none
+include js files in html file.
+ npm install -g serve
+ $ serve
+
+To be able to use our web component, we need to include the five JavaScript files which – let's be honest – is not really convenient. The solution is to concatenate all these files into one JS file
+ $ npm install --save-dev concat fs-extra
+
 ## Subscribe and Stay Updated!
 
 Don't miss out on new videos! Subscribe to my channel and hit the notification bell 🔔 to receive updates whenever I upload fresh content. Let's learn, laugh, and explore together!

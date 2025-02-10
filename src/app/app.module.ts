@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, Injector, NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InterpolationComponent } from './interpolation/interpolation.component';
@@ -35,10 +35,17 @@ import { ViewchildrenComponent } from './viewchildren/viewchildren.component';
 import { ChangeDetectionComponent } from './change-detection/change-detection.component';
 import { TestComponent1 } from './test/test.component';
 import { ListComponent } from './list/list.component';
+import { CommonModule, DatePipe, JsonPipe } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { DataService } from './data.service';
+import { HttpClientModule } from '@angular/common/http';
+import { NewsComponent } from './news/news.component';
+import  { createCustomElement } from '@angular/elements';
+
 
 @NgModule({
   declarations: [
-    // AppComponent,
+    AppComponent,
     InterpolationComponent,
     PropertyBindingComponent,
     // AttrBindingComponent,
@@ -65,15 +72,27 @@ import { ListComponent } from './list/list.component';
     ViewchildrenComponent,
     ChangeDetectionComponent,
     TestComponent1,
-    ListComponent
+    ListComponent,
+    NewsComponent
   ],
   imports: [
+    RouterModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    CommonModule ,
+    HttpClientModule
   ],
-  providers: [],
-  // bootstrap: [AppComponent],
+  providers: [
+    { provide: JsonPipe }, { provide: DatePipe }, DataService
+  ],
+  bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(private injector: Injector) {
+    const el = createCustomElement(NewsComponent, { injector });
+    customElements.define('news-widget', el);
+  }
+  ngDoBootstrap() {}
+}

@@ -336,6 +336,8 @@ platformBrowserDynamic().bootstrapModule(AppModule);
               "buildOptimizer": false
             }
 			
+       "defaultConfiguration": "development"
+       
 			  "development": {
               "buildTarget": "averaging:build:development"
             }
@@ -345,3 +347,26 @@ platformBrowserDynamic().bootstrapModule(AppModule);
 
  An argument for 'value' was not provided unsubscribe next method
   you should call this.ngUnsubscribe$.next(void 0)
+
+
+  'router-outlet' is not a known element
+
+Import RouterModule into your app.module.ts
+
+import { RouterModule } from '@angular/router';
+Add RouterModule into your imports []
+
+like this:
+
+ imports: [    RouterModule,  ]
+
+   declarations: [
+    MainComponent // <----- DON'T FORGET TO DECLARE THIS
+  ],
+
+https://angular.dev/errors/NG0403
+  Bootstrapped NgModule doesn't specify which component to initialize
+    bootstrap: [],
+
+ error NG0908
+ import 'zone.js';

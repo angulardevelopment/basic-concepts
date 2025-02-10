@@ -1,3 +1,4 @@
+import { DATE_PIPE_DEFAULT_OPTIONS, DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Observable, interval } from "rxjs";
 import { map, takeWhile, finalize } from "rxjs/operators";
@@ -6,7 +7,8 @@ import { map, takeWhile, finalize } from "rxjs/operators";
   selector: 'app-pipe-demo',
   templateUrl: './pipe-demo.component.html',
   styleUrls: ['./pipe-demo.component.scss'],
-  standalone: false
+  standalone: false,
+  providers: [{provide: DATE_PIPE_DEFAULT_OPTIONS, useValue: {dateFormat: 'medium'}}]
 })
 export class PipeDemoComponent implements OnInit {
   amount = '5';
@@ -21,7 +23,9 @@ export class PipeDemoComponent implements OnInit {
   words = [{ 'key': 'ab', value: 'cd' }];
   items = ["Angular", "React"];
 
-  constructor() { }
+  constructor(private datePipe: DatePipe) { 
+    console.log(this.datePipe.transform(new Date()));
+  }
 
 
 

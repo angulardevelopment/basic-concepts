@@ -27,4 +27,16 @@
 <!-- <app-button></app-button> -->
 <!-- <app-button [color]="'green'"> </app-button> -->
 <p>Features</p>
-<router-outlet></router-outlet>
+<!-- route-display.component.html -->
+<div *ngIf="routes && routes.length">
+  <h2>Available Routes</h2>
+  <ul>
+    <li *ngFor="let route of routes">
+      <a [routerLink]="route.path">{{ route.path }} (Component: {{ route.component.name }})</a>
+    </li>
+    
+  </ul>
+</div>
+
+<!-- Display the routed components -->
+<router-outlet></router-outlet>  This will display the routed component based on active route

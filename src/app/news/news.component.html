@@ -1,0 +1,10 @@
+<p>news works!</p>
+<p>Web components are a set of browser APIs that enable developers to create custom and reusable HTML tags. These tags can be used in web apps just like standard HTML tags</p>
+<div *ngFor="let article of articles">
+    <h2>{{article.title}}</h2>
+    
+      <p>
+        {{article.description}}
+      </p>
+      <a href="{{article.url}}">Read full article</a>
+  </div>
