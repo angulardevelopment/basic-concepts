@@ -26,13 +26,13 @@ slice
 <!-- pipe with configuration argument => "February 25, 1970" -->
 <div>Birthdate (longDate): {{currentHero?.birthdate | date:'longDate'}}</div>
 
-<p>shortDate{{currentHero?.birthdate | date:'shortDate'}}</p>
-<h2>fullDate{{currentHero?.birthdate | date:'fullDate'}}</h2>
+<p>birthdate (shortDate){{currentHero?.birthdate | date:'shortDate'}}</p>
+<h2>birthdate (fullDate){{currentHero?.birthdate | date:'fullDate'}}</h2>
 
 <h2>fullDate{{currentHero?.birthdate | date:'fullDate' | uppercase}}</h2>
 <p>d/M/y format {{ currentHero?.birthdate | date: 'd/M/y' }}</p>
 
-<div>Birthdate(longDate): {{(currentHero?.birthdate | date:'longDate') | uppercase}}</div>
+<div>Birthdate(longDate) chaining: {{(currentHero?.birthdate | date:'longDate') | uppercase}}</div>
 
 <div id="json">json pipe {{currentHero | json}}</div>
 

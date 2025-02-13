@@ -8,7 +8,7 @@ import { map, takeWhile, finalize } from "rxjs/operators";
   templateUrl: './pipe-demo.component.html',
   styleUrls: ['./pipe-demo.component.scss'],
   standalone: false,
-  providers: [{provide: DATE_PIPE_DEFAULT_OPTIONS, useValue: {dateFormat: 'medium'}}]
+  providers: [{provide: DATE_PIPE_DEFAULT_OPTIONS, useValue: {dateFormat: 'longDate'}}]
 })
 export class PipeDemoComponent implements OnInit {
   amount = '5';
@@ -24,7 +24,7 @@ export class PipeDemoComponent implements OnInit {
   items = ["Angular", "React"];
 
   constructor(private datePipe: DatePipe) { 
-    console.log(this.datePipe.transform(new Date()));
+    console.log(this.datePipe.transform(new Date()), 'datePipe');
   }
 
 
