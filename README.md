@@ -38,6 +38,7 @@ Implemented basic features of Angular like-
 
 Building web component
 $ ng build --prod --output-hashing none
+$ ng build --output-hashing none
 include js files in html file.
  npm install -g serve
  $ serve
