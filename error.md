@@ -22,3 +22,9 @@ imprort relevant modules
 https://angular.dev/errors/NG0301
 Export Not Found
 Ensure that all dependencies are properly imported and declared in your NgModules
+
+ng build --prod			
+Error: Unknown argument: prod
+
+use this 
+ ng build --configuration=production --base-href /my-app/
