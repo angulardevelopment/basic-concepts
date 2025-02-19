@@ -18,3 +18,7 @@ Root element was not found
 https://v17.angular.io/errors/NG0201
 NG0201: No provider for {token} found
 imprort relevant modules
+
+https://angular.dev/errors/NG0301
+Export Not Found
+Ensure that all dependencies are properly imported and declared in your NgModules
