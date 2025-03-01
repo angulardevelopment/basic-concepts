@@ -46,3 +46,4 @@ export class WebwokerDemoComponent {
   }
 
 }
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements
