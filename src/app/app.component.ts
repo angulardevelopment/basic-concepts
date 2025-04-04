@@ -20,6 +20,10 @@ export class AppComponent {
      this.routes = this.router.config;
      console.log(this.routes);
    }
+   showText = true;
+   showHideRouteBlock() {
+ this.showText = !this.showText;
+   }
 }
 
 // if (typeof Worker !== 'undefined') {

@@ -41,7 +41,7 @@ import { DataService } from './data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { NewsComponent } from './news/news.component';
 import  { createCustomElement } from '@angular/elements';
-
+import { CurrencyFormatPipe } from './currency-format.pipe';
 
 @NgModule({
   declarations: [
@@ -73,7 +73,8 @@ import  { createCustomElement } from '@angular/elements';
     ChangeDetectionComponent,
     TestComponent1,
     ListComponent,
-    NewsComponent
+    NewsComponent,
+    CurrencyFormatPipe
   ],
   imports: [
     RouterModule,

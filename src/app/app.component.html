@@ -26,11 +26,12 @@
 
 <!-- <app-button></app-button> -->
 <!-- <app-button [color]="'green'"> </app-button> -->
-<p>Features</p>
-<!-- route-display.component.html -->
+
+<button (click)="showHideRouteBlock()">Show/Hide</button>
+
 <div *ngIf="routes && routes.length">
-  <h2>Available Routes</h2>
-  <ul>
+  <h2>Available Features</h2>
+  <ul *ngIf="showText">
     <li *ngFor="let route of routes">
       <a [routerLink]="route.path">{{ route.path }} (Component: {{ route.component.name }})</a>
     </li>
@@ -38,5 +39,4 @@
   </ul>
 </div>
 
-<!-- Display the routed components -->
-<router-outlet></router-outlet>  This will display the routed component based on active route
+<router-outlet></router-outlet>  

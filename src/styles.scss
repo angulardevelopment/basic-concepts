@@ -1,1 +1,142 @@
-/* You can add global styles to this file, and also import other style files */
+/* General Reset for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: 'Arial', sans-serif;  /* Default font for the entire page */
+    line-height: 1.6;  /* Improve readability */
+    color: #333;  /* Dark gray text */
+    background-color: #f4f4f4;  /* Light gray background */
+    padding: 20px;  /* Add some space around the content */
+  }
+  
+  /* Heading 1 (h1) Styling */
+  h1 {
+    font-size: 2.5rem;  /* Large font size */
+    font-weight: bold;  /* Bold font */
+    margin-bottom: 20px;  /* Space below the heading */
+    color: #222;  /* Darker color for primary headings */
+  }
+  
+  /* Paragraph (p) Styling */
+  p {
+    font-size: 1rem;  /* Normal text size */
+    margin-bottom: 15px;  /* Space between paragraphs */
+    line-height: 1.8;  /* Better readability with increased line-height */
+  }
+  
+  /* Division (div) Styling */
+  div {
+    margin-bottom: 20px;  /* Space below each div */
+  }
+  
+  /* Anchor Links (a) Styling */
+  a {
+    color: #007bff;  /* Link color */
+    text-decoration: none;  /* Remove underline */
+  }
+  
+  a:hover {
+    text-decoration: underline;  /* Underline links on hover */
+    color: #0056b3;  /* Darker blue on hover */
+  }
+  
+  /* Lists (ul, ol) Styling */
+  ul, ol {
+    padding-left: 20px;  /* Indentation for list items */
+    margin-bottom: 20px;  /* Space below lists */
+  }
+  
+  li {
+    font-size: 1rem;  /* Same as paragraph size */
+    line-height: 1.6;
+  }
+  
+  /* Button Styling */
+  button {
+    padding: 10px 20px;  /* Space around the button text */
+    font-size: 1rem;
+    background-color: #007bff;  /* Blue background */
+    color: white;  /* White text */
+    border: none;  /* No border */
+    border-radius: 5px;  /* Rounded corners */
+    cursor: pointer;  /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;  /* Darker blue on hover */
+  }
+  
+  /* Input Fields Styling */
+  input[type="text"], input[type="email"], input[type="password"], textarea {
+    padding: 10px;
+    width: 100%;  /* Full width of the parent container */
+    font-size: 1rem;
+    border: 1px solid #ccc;  /* Light gray border */
+    border-radius: 5px;  /* Rounded corners */
+    margin-bottom: 15px;  /* Space below inputs */
+  }
+  
+  input:focus, textarea:focus {
+    outline: none;  /* Remove default outline */
+    border-color: #007bff;  /* Focused input has blue border */
+  }
+  
+  /* Image Styling */
+  img {
+    max-width: 100%;  /* Ensures responsive images */
+    height: auto;  /* Maintain aspect ratio */
+  }
+  
+  /* Section Styling */
+  section {
+    margin-bottom: 30px;  /* Space between sections */
+  }
+  
+  /* Footer Styling */
+  footer {
+    background-color: #222;  /* Dark background */
+    color: white;  /* White text */
+    padding: 20px;  /* Padding inside the footer */
+    text-align: center;  /* Center the text */
+  }
+  
+  /* General Container Styling */
+  .container {
+    max-width: 1200px;  /* Maximum width */
+    margin: 0 auto;  /* Center the container */
+    padding: 20px;
+  }
+  
+  /* Flexbox Example for Centering Content */
+  .flex-center {
+    display: flex;
+    justify-content: center;  /* Horizontally center content */
+    align-items: center;  /* Vertically center content */
+    height: 100vh;  /* Full viewport height */
+  }
+  
+  /* Media Query for Mobile Devices */
+  @media screen and (max-width: 768px) {
+    body {
+      padding: 10px;  /* Less padding on mobile */
+    }
+  
+    h1 {
+      font-size: 2rem;  /* Smaller headings for mobile */
+    }
+  
+    button {
+      padding: 8px 16px;  /* Smaller buttons on mobile */
+    }
+  
+    input, textarea {
+      font-size: 0.9rem;  /* Smaller inputs for mobile */
+    }
+  }
+  
