@@ -25,7 +25,8 @@ export class WebwokerDemoComponent {
   calculateFactorial() {
     if (typeof Worker !== 'undefined') {
       // Create a new
-      const worker = new Worker(new URL('./app.worker', import.meta.url));
+      // const worker = new Worker(new URL('./app.worker', import.meta.url));
+      const worker = new Worker(new URL('./../factorial.worker', import.meta.url));
       worker.onmessage = ({ data }) => {
         this.factorialResult = data;
       };

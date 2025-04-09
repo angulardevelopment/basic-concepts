@@ -33,7 +33,7 @@ import { MyPipe } from './button/my.pipe';
 import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.component';
 import { ViewchildrenComponent } from './viewchildren/viewchildren.component';
 import { ChangeDetectionComponent } from './change-detection/change-detection.component';
-import { TestComponent1 } from './test/test.component';
+import { TestComponent1 } from './change-detection/test/test.component';
 import { ListComponent } from './list/list.component';
 import { CommonModule, DatePipe, JsonPipe } from '@angular/common';
 import { RouterModule } from '@angular/router';

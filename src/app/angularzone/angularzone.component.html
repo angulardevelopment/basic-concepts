@@ -1,22 +1,14 @@
-zoneless  - Optional zone.js. Ready for experiments.- Zoneless is possible. In production.
-Switching to zoneless is straightforward:
+<h2>Demo: </h2>
 
-Remove zone.js imports
-Add the zoneless provider the application bootstrap
-Check and validate your application
-<h2>Demo: NgZone</h2>
-
+<div>
 <p>Progress: {{progress}}%</p>
 <p *ngIf="progress >= 100">Done processing {{label}} of Angular zone!</p>
-
 <button (click)="processWithinAngularZone()">Process within Angular zone</button>
 <button (click)="processOutsideOfAngularZone()">Process outside of Angular zone</button>
+</div>
 
-
-<p>Start editing to see some magic happen :)</p>
-
-<!-- (mousemove)="mouseMove($event)"  -->
-<div (mousedown)="mouseDown($event)" (mouseup)="mouseUp($event)" class="test">
+<div *ngIf="false">
+<div (mousedown)="mouseDown($event)" (mouseup)="mouseUp($event)" (mousemove)="mouseMove($event)" class="test">
   <!-- <svg:g box *ngFor="let box of boxes" [box]="box">
       </svg:g> -->
 </div>
@@ -40,15 +32,23 @@ Check and validate your application
   <button appTooltip class="btn btn-danger">Hover me!</button>
 </div>
 
+<div>
 <button (click)="onClick()">Click me</button>
 <div>{{ message }}</div>
-
-
-    <button (click)="handleClick()">Click Me</button>
-
-
-     <button (click)="runInZone()">Run In Zone</button>
+<button (click)="handleClick()">Click Me</button>
+<button (click)="runInZone()">Run In Zone</button>
 <button (click)="runOutsideZone()">Run Outside Zone</button>
-
-<textarea #tasknote name="tasknote"> </textarea>
+</div>
+<div>
+<textarea #tasknote name="tasknote" placeholder="tasknote"> </textarea>
 <span id="spnName" #dataContainer> </span>
+</div>
+<pre>
+  zoneless  - Optional zone.js. Ready for experiments.- Zoneless is possible. In production.
+Switching to zoneless is straightforward:
+
+Remove zone.js imports
+Add the zoneless provider the application bootstrap
+Check and validate your application
+</pre>
+</div>

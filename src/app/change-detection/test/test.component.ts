@@ -15,10 +15,12 @@ import {
 })
 export class TestComponent1 implements OnInit {
   @Input() person;
-
+@Input() count = 0;
   constructor(private cdRef: ChangeDetectorRef) {
-    cdRef.detach();
-    }
-
-  ngOnInit() {}
+    // cdRef.detach();
+  }
+  // this.cd.detectChanges();
+  ngOnInit() { 
+    console.log('ngOnInit', this);
+  }
 }

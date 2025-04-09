@@ -11,6 +11,12 @@ import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
 import { TemplatedReferenceComponent } from './templated-reference/templated-reference.component';
 import { TemplateDemoComponent } from './template-tag/template-tag.component';
 import { NewsComponent } from './news/news.component';
+import { EventBindingComponent } from './event-binding/event-binding.component';
+import { ContainerDemoComponent } from './container-demo/container-demo.component';
+import { ViewchildrenComponent } from './viewchildren/viewchildren.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { WebwokerDemoComponent } from './webwoker-demo/webwoker-demo.component';
+import { AngularzoneComponent } from './angularzone/angularzone.component';
 
 export const routes: Routes = [{
   path:'ChangeDetectionComponent',
@@ -54,6 +60,30 @@ export const routes: Routes = [{
 {
   path:'NewsComponent',
   component: NewsComponent
+},
+{
+  path:'EventBindingComponent',
+  component: EventBindingComponent
+},
+{
+  path:'ContainerDemoComponent',
+  component: ContainerDemoComponent
+},
+{
+  path:'ViewchildrenComponent',
+  component: ViewchildrenComponent
+},
+{
+  path:'DirectivesComponent',
+  component: DirectivesComponent
+},
+{
+  path:'WebwokerDemoComponent',
+  component: WebwokerDemoComponent
+},
+{
+  path:'AngularzoneComponent',
+  component: AngularzoneComponent
 }];
 
 @NgModule({

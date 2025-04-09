@@ -18,7 +18,6 @@ export class AppComponent {
    ngAfterViewInit(): void {
      // Fetch the routes from the router
      this.routes = this.router.config;
-     console.log(this.routes);
    }
    showText = true;
    showHideRouteBlock() {
