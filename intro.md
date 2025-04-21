@@ -228,7 +228,7 @@ update env variables
 
 path
 
-C:\Users\sunny.gupta\AppData\Roaming\npm
+C:\Users\cdriveusername\AppData\Roaming\npm
 
 rxjs version error
 
@@ -242,7 +242,7 @@ import { concatMap, delay, map, mergeMap, Observable, Subject, switchMap, from a
 
 in case of this error
 
-ng : File C:\Users\Sunnyvale\AppData\Roaming\npm\ng.ps1 cannot be loaded because running scripts is disabled on this system.
+ng : File C:\Users\cdriveusername\AppData\Roaming\npm\ng.ps1 cannot be loaded because running scripts is disabled on this system.
 For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
 At line:1 char:1
 
@@ -275,10 +275,10 @@ solution-
 @Injectable() 
 
 ----in case if you get puthon error while running old angular project
-C:\Users\sunny.gupta\AppData\Local\Programs\Python\Python310'
+C:\Users\cdriveusername\AppData\Local\Programs\Python\Python310'
 C:\Program Files (x86)\Mozilla Maintenance Service
 
-npm config set python C:\Users\sunny.gupta\AppData\Local\Programs\Python\Python310
+npm config set python C:\Users\cdriveusername\AppData\Local\Programs\Python\Python310
 
 in your Python interpreter, type the following commands:
 
