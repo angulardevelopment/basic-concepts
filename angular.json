@@ -60,8 +60,16 @@
                   "maximumError": "10kb"
                 }
               ]
-            }
-          }
+            },
+             "development": {
+    "optimization": false,
+    "sourceMap": true,
+    "namedChunks": true,
+    "aot": false,
+    "buildOptimizer": false
+  }
+          },
+            "defaultConfiguration": "development"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -121,6 +129,9 @@
           "configurations": {
             "production": {
               "devServerTarget": "basic:serve:production"
+            },
+               "development": {
+              "browserTarget": "tools:build:development"
             }
           }
         },

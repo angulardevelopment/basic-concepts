@@ -1,0 +1,8 @@
+    <p>Count: {{ count }}</p>
+    <button (click)="increment()">+</button>
+    <div>ChangeDetectionCycleCount: {{ GetChangeDetectionCount }}</div>
+
+      <p>Username: {{ username }}</p>
+    <p>Data: {{ data | json }}</p>
+    <button (click)="fetchData()">Fetch User Data</button>
+    <pre [innerHTML]="html"></pre>
