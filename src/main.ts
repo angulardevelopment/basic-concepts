@@ -33,7 +33,7 @@ if (environment.production) {
 //  }
 // );
 
-bootstrapApplication(ZoneJsBasedComponent,   {providers: [                  
+bootstrapApplication(ZonelessSignalsComponent,   {providers: [                  
     // provideExperimentalZonelessChangeDetection(),
     provideHttpClient(),
    ]})

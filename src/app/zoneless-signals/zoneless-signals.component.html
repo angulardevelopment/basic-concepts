@@ -1,9 +1,21 @@
-    <p>Count: {{ count() }}</p>
-    <button (click)="increment()">+</button>
-    <div>ChangeDetectionCycleCount: {{ GetChangeDetectionCount }}</div>
+<p>Count: {{ count() }}</p>
+<button (click)="increment()">+</button>
+<div>ChangeDetectionCycleCount: {{ GetChangeDetectionCount }}</div>
+<p>Username: {{ username() }}</p>
+<p>Data: {{ data() | json }}</p>
+<button (click)="fetchData()">Fetch User Data</button>
+<p>Status: {{userStatus()}}</p>
+<pre id=account class=json-container></pre>
 
-    <p>Username: {{ username() }}</p>
-    <p>Data: {{ data() | json }}</p>
-    <button (click)="fetchData()">Fetch User Data</button>
-    <p>{{userStatus()}}</p>
-    <pre id=account class=json-container></pre>
+<p>newCount: {{ newCount$() }}</p>
+<p>count = {{count()}} is {{isEven() ? 'even':'odd'}}</p>
+<ul>
+    @for (book of bookData; track book.Title) {
+    <li>{{book.Title}}</li>
+    }
+</ul>
+<h3>Selected Books : {{selectedBook().Title}}</h3>
+<button (click)="changeBook()">Change Books</button>
+<button (click)="updateSelectedBook()">update selected book</button>
+<p>ProductSignal: {{ ProductSignal() | json }}</p>
+<button (click)="setProduct()">Set Product</button>

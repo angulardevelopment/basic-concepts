@@ -185,7 +185,6 @@
       }
     }
   },
-  "defaultProject": "basic",
   "cli": {
     "analytics": false
   }
