@@ -28,7 +28,7 @@ export class AngularzoneComponent {
   clientX;
   clientY;
 
-  constructor(private _ngZone: NgZone, private readonly renderer: Renderer2) { }
+  constructor(private _ngZone: NgZone, private readonly renderer: Renderer2, private cdr: ChangeDetectorRef) { }
 
   ngOnInit() {
     // this.dataService.fetchDataFromRemoteService().subscribe((data) => {
@@ -241,6 +241,22 @@ export class AngularzoneComponent {
     this.dataContainer.nativeElement.innerHTML = data;
   }
 
+   counter = 0;
+  autoCounter = 0;
+
+  manualIncrement() {
+    this.counter++;
+    this.cdr.detectChanges();
+  }
+
+  startAutoIncrement() {
+    this.zone.runOutsideAngular(() => {
+      setInterval(() => {
+        this.autoCounter++;
+        this.cdr.detectChanges(); // Update only this component
+      }, 1000);
+    });
+  }
   // Try to avoid it. It does not come under good practice.
 
   /*
