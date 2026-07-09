@@ -8,8 +8,8 @@ describe('ClassBindingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ClassBindingComponent ]
-    })
+    declarations: [ClassBindingComponent]
+})
     .compileComponents();
   });
 

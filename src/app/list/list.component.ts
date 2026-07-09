@@ -49,7 +49,7 @@ export class ListComponent  {
     makeActive = function () {
       for (let i = 0; i < listElements.length; i++)
         listElements[i].classList.remove('active');
-      this.classList.add('active');
+      // this.classList.add('active');
     };
     for (let i = 0; i < listElements.length; i++) {
       listElements[i].addEventListener('mousedown', makeActive);

@@ -8,8 +8,8 @@ describe('EventBindingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EventBindingComponent ]
-    })
+    declarations: [EventBindingComponent]
+})
     .compileComponents();
   });
 

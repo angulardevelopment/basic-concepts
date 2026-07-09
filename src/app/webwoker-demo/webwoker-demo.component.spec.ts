@@ -8,8 +8,8 @@ describe('WebwokerDemoComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WebwokerDemoComponent ]
-    })
+    declarations: [WebwokerDemoComponent]
+})
     .compileComponents();
   });
 

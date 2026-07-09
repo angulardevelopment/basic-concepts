@@ -8,8 +8,8 @@ describe('PropertyBindingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PropertyBindingComponent ]
-    })
+    declarations: [PropertyBindingComponent]
+})
     .compileComponents();
   });
 

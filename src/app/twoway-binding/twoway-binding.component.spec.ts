@@ -8,8 +8,8 @@ describe('TwowayBindingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TwowayBindingComponent ]
-    })
+    declarations: [TwowayBindingComponent]
+})
     .compileComponents();
   });
 

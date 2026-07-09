@@ -1,4 +1,5 @@
 import {
+  ChangeDetectorRef,
   Component,
   ElementRef,
   NgZone,
@@ -250,7 +251,7 @@ export class AngularzoneComponent {
   }
 
   startAutoIncrement() {
-    this.zone.runOutsideAngular(() => {
+    this._ngZone.runOutsideAngular(() => {
       setInterval(() => {
         this.autoCounter++;
         this.cdr.detectChanges(); // Update only this component

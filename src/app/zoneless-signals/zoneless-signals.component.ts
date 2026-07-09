@@ -156,6 +156,9 @@ export class ZonelessSignalsComponent {
     equal:
       productSignalIdEqualityFunction
   });
+
+//   ProductSignal = signal<IPrduct>(this.product,{equal:
+// ProductSignalEqualityFunction})
   setProduct() {
     let p: IProduct =
     {

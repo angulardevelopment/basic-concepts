@@ -8,8 +8,8 @@ describe('LifecycleHooksComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LifecycleHooksComponent ]
-    })
+    declarations: [LifecycleHooksComponent]
+})
     .compileComponents();
   });
 

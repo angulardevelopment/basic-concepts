@@ -8,8 +8,8 @@ describe('AttrBindingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AttrBindingComponent ]
-    })
+    imports: [AttrBindingComponent]
+})
     .compileComponents();
   });
 

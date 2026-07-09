@@ -8,8 +8,8 @@ describe('StyleBindingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ StyleBindingComponent ]
-    })
+    declarations: [StyleBindingComponent]
+})
     .compileComponents();
   });
 

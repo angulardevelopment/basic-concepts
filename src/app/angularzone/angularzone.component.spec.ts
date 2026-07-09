@@ -8,8 +8,8 @@ describe('AngularzoneComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AngularzoneComponent ]
-    })
+    declarations: [AngularzoneComponent]
+})
     .compileComponents();
   });
 
